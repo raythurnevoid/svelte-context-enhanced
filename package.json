@@ -1,6 +1,6 @@
 {
   "name": "@raythurnevoid/svelte-context-enhanced",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "./cjs/index.js",
   "module": "./esm/index.ts",

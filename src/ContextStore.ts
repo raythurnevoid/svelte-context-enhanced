@@ -11,7 +11,7 @@ export function createContextStore<T>() {
     return context$ as Writable<T>;
   }
 
-  function getContextValue(): Writable<Readonly<T>> {
+  function getContextValue(): Writable<T> {
     return getContext(CONTEXT_ID);
   }
 
@@ -22,4 +22,4 @@ export function createContextStore<T>() {
 }
 
 export type SetContextStore<T> = (context?: Partial<T>) => Writable<T>;
-export type GetContextStore<T> = () => Writable<Readonly<T>>;
+export type GetContextStore<T> = () => Writable<T>;
