@@ -3,7 +3,7 @@ import { getContext, setContext } from "svelte";
 export function createContext<T>() {
   const CONTEXT_ID = {};
 
-  function setContextValue(context: Partial<T> = {}): T {
+  function setContextValue(context: Partial<T>): T {
 		setContext(CONTEXT_ID, context);
 		return context as T;
   }
