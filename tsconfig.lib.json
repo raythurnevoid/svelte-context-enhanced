@@ -5,7 +5,7 @@
 		"sourceMap": false
 	},
 	"include": [
-		"./src/lib"
+		"src/lib"
 	],
 	"exclude": [
 		"**/*.test.ts"

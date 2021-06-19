@@ -1,6 +1,6 @@
 {
 	"name": "@raythurnevoid/svelte-context-enhanced",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"description": "",
 	"scripts": {
 		"clean-lib": "del-cli lib",
@@ -33,10 +33,6 @@
 	},
 	"author": "Ray Thurne",
 	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/raythurnevoid/svelte-group-components/issues"
-	},
-	"homepage": "https://github.com/raythurnevoid/svelte-group-components#readme",
 	"devDependencies": {
 		"@raythurnevoid/svelte-template": "^0.1.4",
 		"svelte": "^3.38.2"
