@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" data-svelte="svelte-lptq74"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700" data-svelte="svelte-lptq74"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" data-svelte="svelte-lptq74">
+
+		
+
+		<link rel="modulepreload" href="/svelte-context-enhanced/_app/start-7d45b4ad.js">
+		<link rel="modulepreload" href="/svelte-context-enhanced/_app/chunks/vendor-4b28337c.js">
+		<link rel="modulepreload" href="/svelte-context-enhanced/_app/chunks/paths-45dac81d.js">
+		<link rel="modulepreload" href="/svelte-context-enhanced/_app/pages/__layout.svelte-a3b74b24.js">
+		<link rel="modulepreload" href="/svelte-context-enhanced/_app/chunks/stores-acb2cdbf.js">
+		<link rel="modulepreload" href="/svelte-context-enhanced/_app/pages/index.svelte-9dff4741.js">
+		<link rel="modulepreload" href="/svelte-context-enhanced/_app/chunks/CopyButton.svelte_svelte&type=style&lang-ef9d288a.js">
+		<link rel="stylesheet" href="/svelte-context-enhanced/_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/svelte-context-enhanced/_app/assets/vendor-4adb5257.css">
+		<link rel="stylesheet" href="/svelte-context-enhanced/_app/assets/Footer.svelte_svelte&type=style&lang-ff982b5c.css">
+		<link rel="stylesheet" href="/svelte-context-enhanced/_app/assets/app-abe5c312.css">
+		<link rel="stylesheet" href="/svelte-context-enhanced/_app/assets/CopyButton.svelte_svelte&type=style&lang-be656367.css">
+
+		<script type="module">
+			import { start } from "/svelte-context-enhanced/_app/start-7d45b4ad.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"/svelte-context-enhanced","assets":"/svelte-context-enhanced"},
+				session: {},
+				host: location.host,
+				route: false,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/svelte-context-enhanced/_app/pages/__layout.svelte-a3b74b24.js"),
+						import("/svelte-context-enhanced/_app/pages/index.svelte-9dff4741.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="svelte">
+
+
+
+
+
+
+
+
+<div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<aside id="@smui/drawer/Drawer:1" class="svmd-site-drawer mdc-drawer mdc-drawer--modal">
+
+
+
+<div class="mdc-drawer__content">
+
+
+
+
+
+<nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="@smui/drawer/nav-list/NavList:1" class="mdc-list mdc-list--textual-list" aria-orientation="vertical">
+
+
+
+
+
+
+
+
+
+
+
+
+<li id="@smui/list/Item:12">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="mdc-list-item mdc-list-item--with-one-line mdc-list-item--activated mdc-ripple-upgraded" href="/svelte-context-enhanced/" aria-selected="false" aria-disabled="false">
+
+
+
+<span class="mdc-list-item__ripple"></span>
+
+
+
+
+
+<span class="mdc-list-item__content">
+
+
+
+<span class="mdc-list-item__primary-text">Main Page</span>
+			</span>
+		</a>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+<li id="@smui/list/Item:13">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="mdc-list-item mdc-list-item--with-one-line mdc-ripple-upgraded" href="/svelte-context-enhanced/basic" aria-selected="false" aria-disabled="false">
+
+
+
+<span class="mdc-list-item__ripple"></span>
+
+
+
+
+
+<span class="mdc-list-item__content">
+
+
+
+<span class="mdc-list-item__primary-text">Basic Usage</span>
+			</span>
+		</a>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+<li id="@smui/list/Item:14">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="mdc-list-item mdc-list-item--with-one-line mdc-ripple-upgraded" href="/svelte-context-enhanced/store" aria-selected="false" aria-disabled="false">
+
+
+
+<span class="mdc-list-item__ripple"></span>
+
+
+
+
+
+<span class="mdc-list-item__content">
+
+
+
+<span class="mdc-list-item__primary-text">Context Store</span>
+			</span>
+		</a>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+<li id="@smui/list/Item:15">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="mdc-list-item mdc-list-item--with-one-line mdc-ripple-upgraded" href="/svelte-context-enhanced/advanced" aria-selected="false" aria-disabled="false">
+
+
+
+<span class="mdc-list-item__ripple"></span>
+
+
+
+
+
+<span class="mdc-list-item__content">
+
+
+
+<span class="mdc-list-item__primary-text">Advanced Usage</span>
+			</span>
+		</a>
+
+
+
+
+
+
+</li></ul>
+</nav></div></aside>
+
+
+
+
+
+
+<div class="mdc-drawer-scrim"></div>
+
+	
+
+
+
+<div class="mdc-drawer-app-content">
+	
+
+
+
+<div class="svelte-wmpop3">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header id="@svmd/top-app-bar/TopAppBar:1" class="top-app-bar mdc-top-app-bar"><div class="mdc-top-app-bar__row">
+
+
+
+<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button class="mdc-top-app-bar__navigation-icon mdc-icon-button mdc-ripple-upgraded">
+
+
+
+
+
+
+
+
+
+
+
+<i class="mdc-icon-button__icon material-icons">menu</i></button>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+<span class="mdc-top-app-bar__title">Svelte Typed Context</span></section></div></header>
+<main class="mdc-top-app-bar--fixed-adjust"><main><div class="svelte-gjwjdd"><div class="page-title svelte-dce1tr">
+
+
+
+
+
+
+
+<h1 class="mdc-typography--headline1">Svelte Typed Context</h1>
+
+
+</div>
+<p>The problem with Svelte&#39;s out of the box context system is the missing of
+	typings support for values. <br><br> This library wants to address this
+	feature.
+</p>
+
+<div class="page-title">
+
+
+
+
+
+
+
+<h2 class="mdc-typography--headline2">How to use</h2>
+
+</div>
+<code style="display:none"></code>
+
+<pre class="language-ts" command-line data-output="2-17"><code class="language-ts"><!-- HTML_TAG_START --><span class="token keyword">import</span> <span class="token punctuation">{</span> createContext <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@raythurnevoid/svelte-context-enhanced"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token punctuation">[</span>setContext<span class="token punctuation">,</span> getContext<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token generic-function"><span class="token function">createContext</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token operator">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<!-- HTML_TAG_END --></code></pre>
+
+
+
+<div class="page-title">
+
+
+
+
+
+
+
+<h2 class="mdc-typography--headline2">Installation</h2>
+
+</div>
+<div class="shell-snippet-wrapper svelte-safw0"><div><code style="display:none"></code>
+
+<pre class="language-shell" command-line data-output="2-17"><code class="language-shell"><!-- HTML_TAG_START --><span class="token function">npm</span> i @raythurnevoid/svelte-context-enhanced<!-- HTML_TAG_END --></code></pre></div>
+	<div class="snippet-commands svelte-safw0"><div class="copy-button-wrapper svelte-c1j887">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button id="@svelte-material-design/button/IconButton:1" class="copy-button mdc-icon-button mdc-ripple-upgraded">
+
+
+
+
+
+
+
+
+
+
+
+<i class="mdc-icon-button__icon material-icons">content_copy</i></button>
+
+
+
+
+
+
+
+
+
+</div></div></div>
+
+
+</div></main>
+<footer class="svelte-zamp0f"><div class="content svelte-zamp0f"><div></div>
+<div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a id="@svmd/button/Button:1" class="mdc-button mdc-button--raised mdc-ripple-upgraded" href="/svelte-context-enhanced/basic"><div class="mdc-button__ripple"></div>
+
+
+
+
+
+
+<span class="mdc-button__label">BASIC USAGE</span>
+			
+
+
+
+
+
+
+
+
+
+
+
+<i class="mdc-button__icon material-icons" aria-hidden>arrow_forward</i>
+</a>
+
+
+
+
+
+
+</div></div>
+</footer></main>
+</div></div></div>
+
+
+
+
+
+	<script type="application/json" data-type="svelte-data" data-url="/api/get-file-content?path=src/components/examples/basic/BasicExampleContext.ts">{"status":200,"statusText":"","headers":{"content-type":"text/plain;charset=UTF-8"},"body":"import { createContext } from \"@raythurnevoid\u002Fsvelte-context-enhanced\";\r\n\r\nexport const [setContext, getContext] = createContext\u003Cstring\u003E();\r\n"}</script>
+</div>
+	</body>
+</html>

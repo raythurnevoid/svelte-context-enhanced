@@ -1,0 +1,9 @@
+import {
+	createContextStore,
+	createContextWritableStore,
+} from "@raythurnevoid/svelte-context-enhanced";
+
+export const [setCounterContext, getCounterContext] =
+	createContextWritableStore<number>();
+
+export const [setTimeContext, getTimeContext] = createContextStore<string>();

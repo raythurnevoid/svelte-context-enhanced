@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "website"
 		}
 	],
 	"settings": {
@@ -20,7 +23,11 @@
 		"editor.insertSpaces": false,
 		"typescript.tsdk": "node_modules\\typescript\\lib",
 		"typescript.preferences.importModuleSpecifier": "relative",
-		"typescript.preferences.importModuleSpecifierEnding": "js"
+		"typescript.preferences.importModuleSpecifierEnding": "js",
+		"javascript.preferences.importModuleSpecifierEnding": "js",
+		"[files.associations]": {
+			"*.svelte.html": "svelte"
+		},
 	},
 	"extensions": {
 		"recommendations": [

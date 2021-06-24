@@ -1,19 +1,21 @@
 {
 	"name": "@raythurnevoid/svelte-context-enhanced",
-	"version": "0.0.8",
+	"version": "1.0.0",
 	"description": "",
 	"scripts": {
-		"clean-lib": "del-cli lib",
+		"clean-lib": "del-cli lib/*",
 		"copy:package:cjs": "copyfiles --up 1 cjs/* lib/cjs",
 		"copy:package": "copyfiles package.json lib",
 		"copy:src": "copyfiles --up 2 src/lib/**/* lib/src",
-		"copy:cjs": "copyfiles --up 2 src/lib/**/*!(.ts) lib/cjs",
-		"copy": "copyfiles --up 2 src/lib/**/*!(.ts) lib",
+		"copy:cjs": "copyfiles --up 2 src/lib/**/!(*.ts) lib/cjs",
+		"copy": "copyfiles --up 2 src/lib/**/!(*.ts) lib",
 		"tsc": "tsc -p tsconfig.lib.json",
 		"tsc:cjs": "tsc -p tsconfig.lib.cjs.json",
-		"lib": "npm-run-all clean-lib copy:package copy:package:cjs copy copy:cjs copy:src tsc tsc:cjs",
-		"prepackage": "npm run lib",
-		"package": "npm publish ./lib --access public",
+		"build": "npm-run-all --parallel copy:package copy:package:cjs copy copy:cjs copy:src tsc tsc:cjs",
+		"lib": "npm run clean-lib && npm run build",
+		"dev": "npm run clean-lib && nodemon --watch src -e ts --exec \"npm run build\"",
+		"prepublish": "npm run lib",
+		"publish": "npm publish ./lib",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"type": "module",
@@ -22,6 +24,7 @@
 			"import": "./index.js",
 			"require": "./cjs/index.js"
 		},
+		"./package.json": "./package.json",
 		"./cjs/*": "./cjs/*"
 	},
 	"browserslist": [
@@ -31,10 +34,12 @@
 		"type": "git",
 		"url": "git+https://github.com/raythurnevoid/svelte-group-components.git"
 	},
-	"author": "Ray Thurne",
-	"license": "ISC",
 	"devDependencies": {
 		"@raythurnevoid/svelte-template": "^0.1.4",
-		"svelte": "^3.38.2"
+		"nodemon": "^2.0.7"
+	},
+	"dependencies": {
+		"svelte": "^3.38.3",
+		"svelte-typed-context": "^1.0.1"
 	}
 }

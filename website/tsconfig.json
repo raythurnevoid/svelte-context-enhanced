@@ -25,13 +25,15 @@
 		"allowJs": true,
 		"checkJs": true,
 		"paths": {
+			"#src/*": [
+				"src/*"
+			],
 			"$lib/*": [
 				"src/lib/*"
 			],
 			"@svelte-material-design/core/*": [
-				"node_modules/@svelte-material-ui-test/core/*",
 				"node_modules/@svelte-material-ui-test/core/packages/*",
-			],
+			]
 		}
 	},
 	"include": [

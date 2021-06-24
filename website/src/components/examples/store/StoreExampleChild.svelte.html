@@ -1,0 +1,10 @@
+<script lang="ts">
+	import { getCounterContext, getTimeContext } from "./StoreExampleContext";
+
+	const counter$ = getCounterContext();
+	const time$ = getTimeContext();
+</script>
+
+{$time$}
+<br />
+<button on:click={() => $counter$++}>add</button>
