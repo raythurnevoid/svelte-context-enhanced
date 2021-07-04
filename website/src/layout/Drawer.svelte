@@ -13,7 +13,7 @@
 	import { base } from "$app/paths";
 
 	export let open: boolean = false;
-	export let dismissible: boolean = true;
+	export let dismissible: boolean = false;
 
 	$: links = [
 		{ href: `${base}/`, label: "Main Page" },

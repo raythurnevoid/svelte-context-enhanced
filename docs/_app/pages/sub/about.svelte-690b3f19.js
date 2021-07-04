@@ -1,1 +1,40 @@
-import{S as s,i as t,s as a,t as r,g as o,f as c,h as e,a1 as n,d as u,U as p}from"../../chunks/vendor-4b28337c.js";import{p as f}from"../../chunks/stores-acb2cdbf.js";function i(s){let t,a=s[0].path+"";return{c(){t=r(a)},l(s){t=o(s,a)},m(s,a){c(s,t,a)},p(s,[r]){1&r&&a!==(a=s[0].path+"")&&e(t,a)},i:n,o:n,d(s){s&&u(t)}}}function d(s,t,a){let r;return p(s,f,(s=>a(0,r=s))),[r]}export default class extends s{constructor(s){super(),t(this,s,d,i,a,{})}}
+import { S as SvelteComponent, i as init, s as safe_not_equal, t as text, g as claim_text, f as insert, h as set_data, a1 as noop, d as detach, U as component_subscribe } from "../../chunks/vendor-4b28337c.js";
+import { p as page } from "../../chunks/stores-acb2cdbf.js";
+function create_fragment(ctx) {
+  let t_value = ctx[0].path + "";
+  let t;
+  return {
+    c() {
+      t = text(t_value);
+    },
+    l(nodes) {
+      t = claim_text(nodes, t_value);
+    },
+    m(target, anchor) {
+      insert(target, t, anchor);
+    },
+    p(ctx2, [dirty]) {
+      if (dirty & 1 && t_value !== (t_value = ctx2[0].path + ""))
+        set_data(t, t_value);
+    },
+    i: noop,
+    o: noop,
+    d(detaching) {
+      if (detaching)
+        detach(t);
+    }
+  };
+}
+function instance($$self, $$props, $$invalidate) {
+  let $page;
+  component_subscribe($$self, page, ($$value) => $$invalidate(0, $page = $$value));
+  return [$page];
+}
+class About extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance, create_fragment, safe_not_equal, {});
+  }
+}
+export default About;
+//# sourceMappingURL=about.svelte-690b3f19.js.map

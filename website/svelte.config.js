@@ -44,7 +44,6 @@ const config = {
 		paths: {
 			base,
 		},
-		router: !isProduction(),
 		vite: {
 			base,
 			plugins: [tsconfigPaths(), viteCommonjs()],
@@ -70,6 +69,10 @@ const config = {
 					"@svelte-material-ui-test/core",
 					"svelte-prism",
 				],
+			},
+			build: {
+				minify: false,
+				sourcemap: true,
 			},
 		},
 	},

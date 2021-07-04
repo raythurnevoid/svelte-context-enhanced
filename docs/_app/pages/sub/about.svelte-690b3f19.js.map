@@ -1,0 +1,1 @@
+{"version":3,"file":"about.svelte-690b3f19.js","sources":["../../../../../../src/routes/sub/about.svelte"],"sourcesContent":["<script lang=\"ts\">\r\n\timport { page } from \"$app/stores\";\r\n</script>\r\n\r\n{$page.path}\r\n"],"names":[],"mappings":";;;gBAIC,OAAM;;;;;;;;;;;;;8CAAN,QAAM;;;;;;;;;;;;;;;;;;;;;;;"}

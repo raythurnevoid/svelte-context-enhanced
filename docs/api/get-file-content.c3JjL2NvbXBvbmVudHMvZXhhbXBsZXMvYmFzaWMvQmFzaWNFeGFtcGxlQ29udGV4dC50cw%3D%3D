@@ -1,0 +1,3 @@
+import { createContext } from "@raythurnevoid/svelte-context-enhanced";
+
+export const [setContext, getContext] = createContext<string>();

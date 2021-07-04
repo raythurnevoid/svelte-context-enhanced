@@ -1,37 +1,34 @@
 <script context="module" lang="ts">
 	import type { Load } from "@sveltejs/kit";
+	import { getFileContent } from "../../utils";
 
 	export const load: Load = async function ({ fetch }) {
 		async function getTypingsSource() {
-			const res = await fetch(
-				`/api/get-file-content?path=node_modules/@raythurnevoid/svelte-context-enhanced/store.d.ts`
+			return await getFileContent(
+				fetch,
+				"node_modules/@raythurnevoid/svelte-context-enhanced/store.d.ts"
 			);
-
-			return await res.text();
 		}
 
 		async function getExampleSource() {
-			const res = await fetch(
-				`/api/get-file-content?path=src/components/examples/store/StoreExample.svelte`
+			return await getFileContent(
+				fetch,
+				"src/components/examples/store/StoreExample.svelte"
 			);
-
-			return await res.text();
 		}
 
 		async function getExampleChildSource() {
-			const res = await fetch(
-				`/api/get-file-content?path=src/components/examples/store/StoreExampleChild.svelte`
+			return await getFileContent(
+				fetch,
+				"src/components/examples/store/StoreExampleChild.svelte"
 			);
-
-			return await res.text();
 		}
 
 		async function getExampleContextSource() {
-			const res = await fetch(
-				`/api/get-file-content?path=src/components/examples/store/StoreExampleContext.ts`
+			return await getFileContent(
+				fetch,
+				"src/components/examples/store/StoreExampleContext.ts"
 			);
-
-			return await res.text();
 		}
 
 		return {

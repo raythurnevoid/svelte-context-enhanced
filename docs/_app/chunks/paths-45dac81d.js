@@ -1,1 +1,7 @@
-let s="",a="/.";function e(e){({base:s,assets:a}=e)}export{s as b,e as s};
+let base = "";
+let assets = "/.";
+function set_paths(paths) {
+  ({ base, assets } = paths);
+}
+export { base as b, set_paths as s };
+//# sourceMappingURL=paths-45dac81d.js.map

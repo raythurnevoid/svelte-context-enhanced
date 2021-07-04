@@ -5,8 +5,8 @@
 	import { TopAppBar, Drawer } from ".";
 	import { AppContent } from "@svelte-material-design/core/drawer";
 
-	let open: boolean;
-	let dismissible: boolean = true;
+	let open: boolean = true;
+	let dismissible: boolean = false;
 
 	let tabletMedia: MediaQueryList;
 	onMount(() => {
@@ -26,7 +26,6 @@
 			dismissible = false;
 		}
 	}
-
 </script>
 
 <div>

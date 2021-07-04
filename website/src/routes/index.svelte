@@ -1,13 +1,13 @@
 <script context="module" lang="ts">
 	import type { Load } from "@sveltejs/kit";
+	import { getFileContent } from "../utils";
 
 	export const load: Load = async function ({ fetch }) {
 		async function getHowToUseSource() {
-			const res = await fetch(
-				`/api/get-file-content?path=src/components/examples/basic/BasicExampleContext.ts`
+			return await getFileContent(
+				fetch,
+				"src/components/examples/basic/BasicExampleContext.ts"
 			);
-
-			return await res.text();
 		}
 
 		return {

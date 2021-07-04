@@ -1,0 +1,4 @@
+import { readable, writable } from "svelte/store";
+import type { Writable, Readable } from "svelte/store";
+export declare function createContextWritableStore<T>(): readonly [typeof writable, () => Writable<T>];
+export declare function createContextStore<T>(): readonly [typeof readable, () => Readable<T>];
