@@ -37,9 +37,9 @@
 			on:navButtonClick={() => (open = true)}
 			let:class={contentClass}
 		>
-			<main class={contentClass}>
+			<div class={contentClass}>
 				<slot />
-			</main>
+			</div>
 		</TopAppBar>
 	</AppContent>
 </div>

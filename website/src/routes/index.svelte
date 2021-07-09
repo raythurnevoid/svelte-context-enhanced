@@ -45,6 +45,6 @@
 
 		<SectionTitle>Installation</SectionTitle>
 		<ShellSnippet source="npm i @raythurnevoid/svelte-context-enhanced" />
+		<Footer next={{ label: "BASIC USAGE", href: `${base}/basic` }} />
 	</PageContent>
 </main>
-<Footer next={{ label: "BASIC USAGE", href: `${base}/basic` }} />

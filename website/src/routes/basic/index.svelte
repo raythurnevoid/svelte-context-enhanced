@@ -49,7 +49,8 @@
 		ExampleContainer,
 	} from "#src/components/main/index";
 	import { Code, FileSourceSnippet } from "#src/components/main/Code/index";
-	import { PageContent, Footer } from "#src/layout/index";
+	import { PageContent, Footer, ModulePage } from "#src/layout/index";
+	import { PageContentsNav } from "#src/layout/PageContentNav/index";
 	import { BasicExample } from "#src/components/examples/basic/index";
 	import { base } from "$app/paths";
 
@@ -59,9 +60,9 @@
 	export let typingsSource: string;
 </script>
 
-<main>
+<ModulePage>
 	<PageContent>
-		<PageTitle>Basic Usage</PageTitle>
+		<PageTitle id="usage">Basic Usage</PageTitle>
 		<p>
 			With <code>createContext</code> function you can create typed context setter
 			and getter.
@@ -79,12 +80,12 @@
 			source={exampleContextSource}
 		/>
 
-		<SectionTitle>Result</SectionTitle>
+		<SectionTitle id="result">Result</SectionTitle>
 		<ExampleContainer>
 			<BasicExample />
 		</ExampleContainer>
 
-		<SectionTitle>API</SectionTitle>
+		<SectionTitle id="api">API</SectionTitle>
 		<p>
 			<code>createContext</code> takes no arguments but wants you to set it's generic
 			type in order to type the given context setter and getter.
@@ -92,9 +93,10 @@
 		<p>
 			<Code lang="ts" source={typingsSource} />
 		</p>
+		<Footer
+			prev={{ label: "MAIN PAGE", href: base }}
+			next={{ label: "CONTEXT STORE", href: `${base}/store` }}
+		/>
 	</PageContent>
-</main>
-<Footer
-	prev={{ label: "MAIN PAGE", href: base }}
-	next={{ label: "CONTEXT STORE", href: `${base}/store` }}
-/>
+	<PageContentsNav />
+</ModulePage>

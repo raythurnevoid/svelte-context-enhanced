@@ -1,6 +1,13 @@
 <script lang="ts">
-	import { Layout } from "../layout";
+	import { Layout } from "../layout/index";
 	import "../app.css";
+	import { onMount } from "svelte";
+
+	onMount(() => {
+		setTimeout(() => {
+			window.document.firstElementChild.classList.add("smooth-scroll");
+		});
+	});
 </script>
 
 <svelte:head>
@@ -25,4 +32,9 @@
 <!-- <slot /> -->
 <style lang="scss" global>
 	@use "smui-theme.scss";
+	@use "@material/theme/styles.scss";
+
+	html.smooth-scroll {
+		scroll-behavior: smooth;
+	}
 </style>

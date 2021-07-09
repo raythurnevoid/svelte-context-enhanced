@@ -70,10 +70,6 @@ const config = {
 					"svelte-prism",
 				],
 			},
-			build: {
-				minify: false,
-				sourcemap: true,
-			},
 		},
 	},
 };
