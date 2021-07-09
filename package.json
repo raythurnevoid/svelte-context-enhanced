@@ -1,6 +1,6 @@
 {
 	"name": "@raythurnevoid/svelte-context-enhanced",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "",
 	"scripts": {
 		"clean-lib": "del-cli lib/*",
@@ -14,8 +14,7 @@
 		"build": "npm-run-all --parallel copy:package copy:package:cjs copy copy:cjs copy:src tsc tsc:cjs",
 		"lib": "npm run clean-lib && npm run build",
 		"dev": "npm run clean-lib && nodemon --watch src -e ts --exec \"npm run build\"",
-		"prepublish": "npm run lib",
-		"publish": "npm publish ./lib",
+		"package": "npm run lib && npm publish ./lib",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"type": "module",
