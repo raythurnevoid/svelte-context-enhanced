@@ -49,7 +49,8 @@
 		ExampleContainer,
 	} from "#src/components/main/index";
 	import { Code, FileSourceSnippet } from "#src/components/main/Code/index";
-	import { PageContent, Footer } from "#src/layout/index";
+	import { PageContent, Footer, ModulePage } from "#src/layout/index";
+	import { PageContentsNav } from "#src/layout/PageContentNav/index";
 	import { StoreExample } from "#src/components/examples/store/index";
 	import { base } from "$app/paths";
 
@@ -59,9 +60,9 @@
 	export let typingsSource: string;
 </script>
 
-<main>
+<ModulePage>
 	<PageContent>
-		<PageTitle>Context Store</PageTitle>
+		<PageTitle id="usage">Context Store</PageTitle>
 		<p>
 			With <code>createContextStore</code> and
 			<code>createContextWritableStore</code> you can can take advantage of typings
@@ -80,12 +81,12 @@
 			source={exampleContextSource}
 		/>
 
-		<SectionTitle>Result</SectionTitle>
+		<SectionTitle id="result">Result</SectionTitle>
 		<ExampleContainer>
 			<StoreExample />
 		</ExampleContainer>
 
-		<SectionTitle>API</SectionTitle>
+		<SectionTitle id="api">API</SectionTitle>
 		<p>
 			Both <code>createContextStore</code> and
 			<code>createContextWritableStore</code> are proxies to Svelte's
@@ -95,9 +96,10 @@
 		<p>
 			<Code lang="ts" source={typingsSource} />
 		</p>
+		<Footer
+			prev={{ label: "BASIC USAGE", href: `${base}basic` }}
+			next={{ label: "ADVANCED USAGE", href: `${base}/advanced` }}
+		/>
 	</PageContent>
-</main>
-<Footer
-	prev={{ label: "BASIC USAGE", href: `${base}basic` }}
-	next={{ label: "ADVANCED USAGE", href: `${base}/advanced` }}
-/>
+	<PageContentsNav items={[["usage", "Usage"], "result", "api"]} />
+</ModulePage>

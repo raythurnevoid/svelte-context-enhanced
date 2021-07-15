@@ -43,29 +43,29 @@
 	import { onMount, tick } from "svelte";
 
 	const activeHash$ = setActiveHashContextStore(createActiveHashStore());
+	let exportedItems: (string | [string, string])[];
+	export { exportedItems as items };
 
-	let items = [
-		{
-			label: "Usage",
-			hash: "usage",
-		},
-		{
-			label: "Result",
-			hash: "result",
-		},
-		{
-			label: "API",
-			hash: "api",
-		},
-	] as any[];
+	let items: Map<string, string>;
 
 	onMount(async () => {
 		const intersections = new Set<string>();
 
+		items = new Map(
+			exportedItems.map((item) => {
+				const id = getId(item);
+				let label = getLabel(item);
+				if (!label) {
+					label = document.getElementById(id).textContent;
+				}
+				return [id, label];
+			})
+		);
+
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
-					const changedItemHash = findItemByHash(entry.target.id).hash;
+					const changedItemHash = findId(entry.target.id);
 					if (entry.isIntersecting) {
 						intersections.add(changedItemHash);
 					} else if (entry.boundingClientRect.y > 0) {
@@ -82,15 +82,13 @@
 			}
 		);
 
-		items.forEach((item) => {
-			observer.observe(window.document.querySelector(`#${item.hash}`));
+		[...items.keys()].forEach((id) => {
+			observer.observe(window.document.querySelector(`#${id}`));
 		});
 
 		setTimeout(async () => {
 			if (window.location.hash) {
-				activeHash$.set(
-					findItemByHash(window.location.hash.replace("#", "")).hash
-				);
+				activeHash$.set(findId(window.location.hash.replace("#", "")));
 			}
 		});
 
@@ -99,8 +97,25 @@
 		};
 	});
 
-	function findItemByHash(hash: string) {
-		return items.find((item) => item.hash === hash);
+	function findId(id: string) {
+		const item = [...items.keys()].find((item) => item === id);
+		return getId(item);
+	}
+
+	function getId(item: string | [string, string]) {
+		if (Array.isArray(item)) {
+			return item[0];
+		} else {
+			return item;
+		}
+	}
+
+	function getLabel(item: string | [string, string]) {
+		if (Array.isArray(item)) {
+			return item[1];
+		} else {
+			return null;
+		}
 	}
 
 	function handleClick(hash: string) {
@@ -114,13 +129,13 @@
 			Contents
 		</Typography>
 		<ul>
-			{#each items as item}
-				<PageContentsNavItem
-					hash={item.hash}
-					on:click={() => handleClick(item.hash)}
-					>{item.label}</PageContentsNavItem
-				>
-			{/each}
+			{#if items}
+				{#each [...items] as [id, label]}
+					<PageContentsNavItem hash={id} on:click={() => handleClick(id)}>
+						{label}
+					</PageContentsNavItem>
+				{/each}
+			{/if}
 		</ul>
 	</nav>
 </div>

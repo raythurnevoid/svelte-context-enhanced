@@ -49,7 +49,8 @@
 		ExampleContainer,
 	} from "#src/components/main/index";
 	import { Code, FileSourceSnippet } from "#src/components/main/Code/index";
-	import { PageContent, Footer } from "#src/layout/index";
+	import { PageContent, Footer, ModulePage } from "#src/layout/index";
+	import { PageContentsNav } from "#src/layout/PageContentNav/index";
 	import { AdvancedExample } from "#src/components/examples/advanced/index";
 	import { base } from "$app/paths";
 
@@ -59,9 +60,9 @@
 	export let typingsSource: string;
 </script>
 
-<main>
+<ModulePage>
 	<PageContent>
-		<PageTitle>Advanced Usage</PageTitle>
+		<PageTitle id="usage">Advanced Usage</PageTitle>
 		<p>
 			You can create your own context typings and implementations using the
 			basic key interface <code>{`ContextKey<T>`}</code> and the functions
@@ -84,12 +85,12 @@
 			source={exampleContextSource}
 		/>
 
-		<SectionTitle>Result</SectionTitle>
+		<SectionTitle id="result">Result</SectionTitle>
 		<ExampleContainer>
 			<AdvancedExample />
 		</ExampleContainer>
 
-		<SectionTitle>API</SectionTitle>
+		<SectionTitle id="api">API</SectionTitle>
 		<p>
 			<code>createContext</code> takes no arguments but wants you to set it's generic
 			type in order to type the given context setter and getter.
@@ -97,6 +98,7 @@
 		<p>
 			<Code lang="ts" source={typingsSource} />
 		</p>
+		<Footer prev={{ label: "CONTEXT STORE", href: `${base}/store` }} />
 	</PageContent>
-</main>
-<Footer prev={{ label: "CONTEXT STORE", href: `${base}/store` }} />
+	<PageContentsNav items={[["usage", "Usage"], "result", "api"]} />
+</ModulePage>

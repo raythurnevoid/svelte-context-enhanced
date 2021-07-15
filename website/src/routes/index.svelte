@@ -25,13 +25,13 @@
 		SectionTitle,
 		Code,
 	} from "#src/components/main/index";
-	import { PageContent, Footer } from "#src/layout/index";
+	import { PageContent, Footer, ModulePage } from "#src/layout/index";
 	import { base } from "$app/paths";
 
 	export let howToUseSource: string;
 </script>
 
-<main>
+<ModulePage>
 	<PageContent>
 		<PageTitle>Svelte Typed Context</PageTitle>
 		<p>
@@ -47,4 +47,4 @@
 		<ShellSnippet source="npm i @raythurnevoid/svelte-context-enhanced" />
 		<Footer next={{ label: "BASIC USAGE", href: `${base}/basic` }} />
 	</PageContent>
-</main>
+</ModulePage>

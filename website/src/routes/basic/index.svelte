@@ -98,5 +98,5 @@
 			next={{ label: "CONTEXT STORE", href: `${base}/store` }}
 		/>
 	</PageContent>
-	<PageContentsNav />
+	<PageContentsNav items={[["usage", "Usage"], "result", "api"]} />
 </ModulePage>
