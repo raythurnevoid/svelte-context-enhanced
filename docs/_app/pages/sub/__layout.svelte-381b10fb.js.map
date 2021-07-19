@@ -1,1 +1,0 @@
-{"version":3,"file":"__layout.svelte-381b10fb.js","sources":["../../../../../../src/routes/sub/__layout.svelte"],"sourcesContent":["<script lang=\"ts\">\r\n\timport { page } from \"$app/stores\";\r\n</script>\r\n\r\n{$page.path}\r\n<slot />\r\n"],"names":[],"mappings":";;;iBAIC,OAAM;;;;;;;;;;;;;;;;;;;;;;;;;;;;8DAAN,QAAM;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"}
