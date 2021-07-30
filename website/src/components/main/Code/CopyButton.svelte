@@ -29,7 +29,7 @@
 		right: 0;
 
 		.copy-button {
-			@include icon-button.ink-color(primary);
+			color: #ffdfdf;
 		}
 	}
 </style>

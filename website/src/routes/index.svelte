@@ -19,12 +19,7 @@
 </script>
 
 <script lang="ts">
-	import {
-		PageTitle,
-		ShellSnippet,
-		SectionTitle,
-		Code,
-	} from "#src/components/main/index";
+	import { PageTitle, SectionTitle, Code } from "#src/components/main/index";
 	import { PageContent, Footer, ModulePage } from "#src/layout/index";
 	import { base } from "$app/paths";
 
@@ -44,7 +39,7 @@
 		<Code lang="ts" source={howToUseSource} />
 
 		<SectionTitle>Installation</SectionTitle>
-		<ShellSnippet source="npm i @raythurnevoid/svelte-context-enhanced" />
+		<Code lang="shell" source="npm i @raythurnevoid/svelte-context-enhanced" />
 		<Footer next={{ label: "BASIC USAGE", href: `${base}/basic` }} />
 	</PageContent>
 </ModulePage>
