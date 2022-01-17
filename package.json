@@ -1,14 +1,14 @@
 {
 	"name": "@raythurnevoid/svelte-context-enhanced",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "",
 	"scripts": {
 		"clean-lib": "del-cli lib/*",
 		"copy:package:cjs": "copyfiles --up 1 cjs/* lib/cjs",
 		"copy:package": "copyfiles package.json lib",
 		"copy:src": "copyfiles --up 2 src/lib/**/* lib/src",
-		"copy:cjs": "copyfiles --up 2 \"src/lib/**/*.!(ts)\" lib/cjs",
-		"copy": "copyfiles --up 2 \"src/lib/**/*.!(ts)\" lib",
+		"copy:cjs": "copyfiles --up 2 \"src/lib/**/*.!(ts|test)\" lib/cjs",
+		"copy": "copyfiles --up 2 \"src/lib/**/*.!(ts|test)\" lib",
 		"tsc": "tsc -p tsconfig.lib.json",
 		"tsc:cjs": "tsc -p tsconfig.lib.cjs.json",
 		"build": "npm-run-all --parallel copy:package copy:package:cjs copy copy:cjs copy:src tsc tsc:cjs",
@@ -34,11 +34,10 @@
 		"url": "git+https://github.com/raythurnevoid/svelte-group-components.git"
 	},
 	"devDependencies": {
-		"@raythurnevoid/svelte-template": "^0.1.4",
-		"nodemon": "^2.0.7"
+		"@raythurnevoid/svelte-template": "^0.3.8",
+		"nodemon": "^2.0.15"
 	},
 	"dependencies": {
-		"svelte": "^3.38.3",
-		"svelte-typed-context": "^1.0.1"
+		"svelte": "^3.46.2"
 	}
 }
