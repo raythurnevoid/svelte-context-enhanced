@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="Svelte demo app" />
+		<link rel="icon" href="/svelte-context-enhanced/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content=""><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" data-svelte="svelte-lptq74"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700" data-svelte="svelte-lptq74"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" data-svelte="svelte-lptq74">
+	<link rel="stylesheet" href="/svelte-context-enhanced/_app/assets/vendor-a59b59e4.css">
+	<link rel="stylesheet" href="/svelte-context-enhanced/_app/assets/pages/__layout.svelte-53c37207.css">
+	<link rel="stylesheet" href="/svelte-context-enhanced/_app/assets/ModulePage.svelte_svelte_type_style_lang-768889ae.css">
+	<link rel="stylesheet" href="/svelte-context-enhanced/_app/assets/CopyButton-44b86751.css">
+	<link rel="stylesheet" href="/svelte-context-enhanced/_app/assets/PageContentsNavItem-742ee924.css">
+	<link rel="modulepreload" href="/svelte-context-enhanced/_app/start-fa018a3c.js">
+	<link rel="modulepreload" href="/svelte-context-enhanced/_app/chunks/vendor-32dd28f6.js">
+	<link rel="modulepreload" href="/svelte-context-enhanced/_app/chunks/paths-396f020f.js">
+	<link rel="modulepreload" href="/svelte-context-enhanced/_app/chunks/preload-helper-413b0d67.js">
+	<link rel="modulepreload" href="/svelte-context-enhanced/_app/pages/__layout.svelte-10d1d885.js">
+	<link rel="modulepreload" href="/svelte-context-enhanced/_app/chunks/stores-38b87635.js">
+	<link rel="modulepreload" href="/svelte-context-enhanced/_app/pages/basic/index.svelte-29cbd603.js">
+	<link rel="modulepreload" href="/svelte-context-enhanced/_app/chunks/CopyButton-c47b43e8.js">
+	<link rel="modulepreload" href="/svelte-context-enhanced/_app/chunks/PageContentsNavItem-486ccfab.js">
+	</head>
+	<body>
+		<div id="#svelte">
+
+
+
+
+
+
+
+
+<div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<aside id="@smui/drawer/Drawer:3" class="svmd-site-drawer mdc-drawer mdc-drawer--open">
+
+
+
+<div class="mdc-drawer__content">
+
+
+
+
+
+<nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="@smui/drawer/nav-list/NavList:3" class="mdc-list mdc-list--textual-list" aria-orientation="vertical">
+
+
+
+
+
+
+
+
+
+
+
+
+<li id="@smui/list/Item:28">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="mdc-list-item mdc-list-item--with-one-line mdc-ripple-upgraded" href="/svelte-context-enhanced/" aria-selected="false" aria-disabled="false">
+
+
+
+<span class="mdc-list-item__ripple"></span>
+
+		
+
+
+
+<span class="mdc-list-item__content">
+
+
+
+<span class="mdc-list-item__primary-text">Main Page</span>
+					</span>
+				</a>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+<li id="@smui/list/Item:29">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="mdc-list-item mdc-list-item--with-one-line mdc-ripple-upgraded" href="/svelte-context-enhanced/basic" aria-selected="false" aria-disabled="false">
+
+
+
+<span class="mdc-list-item__ripple"></span>
+
+		
+
+
+
+<span class="mdc-list-item__content">
+
+
+
+<span class="mdc-list-item__primary-text">Basic Usage</span>
+					</span>
+				</a>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+<li id="@smui/list/Item:30">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="mdc-list-item mdc-list-item--with-one-line mdc-ripple-upgraded" href="/svelte-context-enhanced/store" aria-selected="false" aria-disabled="false">
+
+
+
+<span class="mdc-list-item__ripple"></span>
+
+		
+
+
+
+<span class="mdc-list-item__content">
+
+
+
+<span class="mdc-list-item__primary-text">Context Store</span>
+					</span>
+				</a>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+<li id="@smui/list/Item:31">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="mdc-list-item mdc-list-item--with-one-line mdc-ripple-upgraded" href="/svelte-context-enhanced/advanced" aria-selected="false" aria-disabled="false">
+
+
+
+<span class="mdc-list-item__ripple"></span>
+
+		
+
+
+
+<span class="mdc-list-item__content">
+
+
+
+<span class="mdc-list-item__primary-text">Advanced Usage</span>
+					</span>
+				</a>
+
+
+
+
+
+
+</li></ul></nav>
+
+</div></aside>
+
+
+
+
+	
+
+
+
+<div class="mdc-drawer-app-content">
+	
+
+
+
+<div class="svelte-wmpop3">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header id="@svmd/top-app-bar/TopAppBar:3" class="top-app-bar mdc-top-app-bar"><div class="mdc-top-app-bar__row">
+
+
+
+<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+			
+
+
+
+
+
+
+
+<span class="mdc-top-app-bar__title">Svelte Typed Context</span></section></div></header>
+<div class="mdc-top-app-bar--fixed-adjust"><main class="svelte-1mrd196"><div class="svelte-nxbnxc"><div class="page-title svelte-1q0bw52">
+
+
+
+
+
+
+
+<h1 id="usage" class="mdc-typography--headline1">Basic Usage</h1>
+
+
+</div>
+		<p>With <code>createContext</code> function you can create typed context setter
+			and getter.
+		</p>
+
+		<div class="svelte-ihxb8l"><code class="svelte-ihxb8l">BasicExample.svelte</code>
+	<div class="shell-snippet-wrapper svelte-s39vp1"><div><code style="display:none"></code>
+
+<pre class="language-svelte" command-line data-output="2-17"><code class="language-svelte"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ts<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">import</span> BasicExampleChild <span class="token keyword">from</span> <span class="token string">"./BasicExampleChild.svelte"</span><span class="token punctuation">;</span>
+	<span class="token keyword">import</span> <span class="token punctuation">{</span> setContext <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./BasicExampleContext"</span><span class="token punctuation">;</span>
+
+	<span class="token function">setContext</span><span class="token punctuation">(</span><span class="token string">"value"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>BasicExampleChild</span> <span class="token punctuation">/></span></span>
+<!-- HTML_TAG_END --></code></pre></div>
+	<div class="code-commands svelte-s39vp1"><div class="copy-button-wrapper svelte-2c736f">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button id="@svelte-material-design/button/IconButton:6" class="copy-button mdc-icon-button mdc-ripple-upgraded">
+
+
+
+
+
+
+
+
+
+
+
+<i class="mdc-icon-button__icon material-icons">content_copy</i></button>
+
+
+
+
+
+
+
+
+
+</div></div></div>
+
+
+</div>
+
+		<div class="svelte-ihxb8l"><code class="svelte-ihxb8l">BasicExampleChild.svelte</code>
+	<div class="shell-snippet-wrapper svelte-s39vp1"><div><code style="display:none"></code>
+
+<pre class="language-svelte" command-line data-output="2-17"><code class="language-svelte"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ts<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">import</span> <span class="token punctuation">{</span> getContext <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./BasicExampleContext"</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">const</span> value <span class="token operator">=</span> <span class="token function">getContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token language-javascript"><span class="token punctuation">{</span>value<span class="token punctuation">}</span></span>
+<!-- HTML_TAG_END --></code></pre></div>
+	<div class="code-commands svelte-s39vp1"><div class="copy-button-wrapper svelte-2c736f">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button id="@svelte-material-design/button/IconButton:7" class="copy-button mdc-icon-button mdc-ripple-upgraded">
+
+
+
+
+
+
+
+
+
+
+
+<i class="mdc-icon-button__icon material-icons">content_copy</i></button>
+
+
+
+
+
+
+
+
+
+</div></div></div>
+
+
+</div>
+
+		<div class="svelte-ihxb8l"><code class="svelte-ihxb8l">BasicExampleContext.ts</code>
+	<div class="shell-snippet-wrapper svelte-s39vp1"><div><code style="display:none"></code>
+
+<pre class="language-ts" command-line data-output="2-17"><code class="language-ts"><!-- HTML_TAG_START --><span class="token keyword">import</span> <span class="token punctuation">{</span> createContext <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@raythurnevoid/svelte-context-enhanced"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token punctuation">[</span>setContext<span class="token punctuation">,</span> getContext<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token generic-function"><span class="token function">createContext</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token operator">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<!-- HTML_TAG_END --></code></pre></div>
+	<div class="code-commands svelte-s39vp1"><div class="copy-button-wrapper svelte-2c736f">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button id="@svelte-material-design/button/IconButton:8" class="copy-button mdc-icon-button mdc-ripple-upgraded">
+
+
+
+
+
+
+
+
+
+
+
+<i class="mdc-icon-button__icon material-icons">content_copy</i></button>
+
+
+
+
+
+
+
+
+
+</div></div></div>
+
+
+</div>
+
+		<div class="section-title svelte-12968tv">
+
+
+
+
+
+
+
+<h2 id="result" class="mdc-typography--headline2">Result</h2>
+
+
+</div>
+		<div class="svelte-uzctd">value
+</div>
+
+		<div class="section-title svelte-12968tv">
+
+
+
+
+
+
+
+<h2 id="api" class="mdc-typography--headline2">API</h2>
+
+
+</div>
+		<p><code>createContext</code> takes no arguments but wants you to set it&#39;s generic
+			type in order to type the given context setter and getter.
+		</p>
+		<p><div class="shell-snippet-wrapper svelte-s39vp1"><div><code style="display:none"></code>
+
+<pre class="language-ts" command-line data-output="2-17"><code class="language-ts"><!-- HTML_TAG_START --><span class="token keyword">export</span> <span class="token keyword">declare</span> <span class="token keyword">function</span> <span class="token generic-function"><span class="token function">createContext</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">readonly</span> <span class="token punctuation">[</span><span class="token punctuation">(</span>context<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token constant">T</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token constant">T</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<!-- HTML_TAG_END --></code></pre></div>
+	<div class="code-commands svelte-s39vp1"><div class="copy-button-wrapper svelte-2c736f">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button id="@svelte-material-design/button/IconButton:9" class="copy-button mdc-icon-button mdc-ripple-upgraded">
+
+
+
+
+
+
+
+
+
+
+
+<i class="mdc-icon-button__icon material-icons">content_copy</i></button>
+
+
+
+
+
+
+
+
+
+</div></div></div>
+
+</p>
+		<footer class="svelte-zamp0f"><div class="content svelte-zamp0f"><div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a id="@svmd/button/Button:2" class="mdc-button mdc-button--outlined mdc-ripple-upgraded" href="/svelte-context-enhanced"><div class="mdc-button__ripple"></div>
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+<i class="mdc-button__icon material-icons" aria-hidden>arrow_back</i>
+					
+
+
+
+<span class="mdc-button__label">MAIN PAGE</span>
+		</a>
+
+
+
+
+
+
+</div>
+		<div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a id="@svmd/button/Button:3" class="mdc-button mdc-button--raised mdc-ripple-upgraded" href="/svelte-context-enhanced/store"><div class="mdc-button__ripple"></div>
+		
+		
+		
+
+
+
+<span class="mdc-button__label">CONTEXT STORE</span>
+					
+
+
+
+
+
+
+
+
+
+
+
+<i class="mdc-button__icon material-icons" aria-hidden>arrow_forward</i>
+		</a>
+
+
+
+
+
+
+</div></div>
+</footer>
+</div>
+	<div class="page-contents-nav" aria-labelledby="page-contents-nav__heading"><nav class="svelte-1o21c7h">
+
+
+
+
+
+
+
+<span id="page-contents-nav__heading" class="mdc-typography--overline">Contents
+		</span>
+
+
+		<ul class="svelte-1o21c7h"></ul></nav>
+</div>
+</main></div>
+</div></div></div>
+
+
+
+
+		<script type="module" data-hydrate="d5xlci">
+		import { start } from "/svelte-context-enhanced/_app/start-fa018a3c.js";
+		start({
+			target: document.querySelector('[data-hydrate="d5xlci"]').parentNode,
+			paths: {"base":"/svelte-context-enhanced","assets":"/svelte-context-enhanced"},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/svelte-context-enhanced/_app/pages/__layout.svelte-10d1d885.js"),
+						import("/svelte-context-enhanced/_app/pages/basic/index.svelte-29cbd603.js")
+				],
+				params: {},
+				routeId: "basic"
+			}
+		});
+	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/svelte-context-enhanced/api/get-file-content.bm9kZV9tb2R1bGVzL0ByYXl0aHVybmV2b2lkL3N2ZWx0ZS1jb250ZXh0LWVuaGFuY2VkL2Jhc2ljLmQudHM%3D">{"status":200,"statusText":"","headers":{"content-type":"text/plain;charset=UTF-8"},"body":"export declare function createContext\u003CT>(): readonly [(context: T) => T, () => T];\r\n"}</script>
+	<script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/svelte-context-enhanced/api/get-file-content.c3JjL2xpYi9jb21wb25lbnRzL2V4YW1wbGVzL2Jhc2ljL0Jhc2ljRXhhbXBsZS5zdmVsdGU%3D">{"status":200,"statusText":"","headers":{"content-type":"text/plain;charset=UTF-8"},"body":"\u003Cscript lang=\"ts\">\r\n\timport BasicExampleChild from \"./BasicExampleChild.svelte\";\r\n\timport { setContext } from \"./BasicExampleContext\";\r\n\r\n\tsetContext(\"value\");\r\n\u003C/script>\r\n\r\n\u003CBasicExampleChild />\r\n"}</script>
+	<script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/svelte-context-enhanced/api/get-file-content.c3JjL2xpYi9jb21wb25lbnRzL2V4YW1wbGVzL2Jhc2ljL0Jhc2ljRXhhbXBsZUNoaWxkLnN2ZWx0ZQ%3D%3D">{"status":200,"statusText":"","headers":{"content-type":"text/plain;charset=UTF-8"},"body":"\u003Cscript lang=\"ts\">\r\n\timport { getContext } from \"./BasicExampleContext\";\r\n\r\n\tconst value = getContext();\r\n\u003C/script>\r\n\r\n{value}\r\n"}</script>
+	<script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/svelte-context-enhanced/api/get-file-content.c3JjL2xpYi9jb21wb25lbnRzL2V4YW1wbGVzL2Jhc2ljL0Jhc2ljRXhhbXBsZUNvbnRleHQudHM%3D">{"status":200,"statusText":"","headers":{"content-type":"text/plain;charset=UTF-8"},"body":"import { createContext } from \"@raythurnevoid/svelte-context-enhanced\";\r\n\r\nexport const [setContext, getContext] = createContext\u003Cstring>();\r\n"}</script></div>
+	</body>
+</html>

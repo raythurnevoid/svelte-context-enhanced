@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="Svelte demo app" />
+		<link rel="icon" href="/svelte-context-enhanced/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content=""><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" data-svelte="svelte-lptq74"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700" data-svelte="svelte-lptq74"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" data-svelte="svelte-lptq74">
+	<link rel="stylesheet" href="/svelte-context-enhanced/_app/assets/vendor-a59b59e4.css">
+	<link rel="stylesheet" href="/svelte-context-enhanced/_app/assets/pages/__layout.svelte-53c37207.css">
+	<link rel="stylesheet" href="/svelte-context-enhanced/_app/assets/ModulePage.svelte_svelte_type_style_lang-768889ae.css">
+	<link rel="stylesheet" href="/svelte-context-enhanced/_app/assets/CopyButton-44b86751.css">
+	<link rel="stylesheet" href="/svelte-context-enhanced/_app/assets/PageContentsNavItem-742ee924.css">
+	<link rel="modulepreload" href="/svelte-context-enhanced/_app/start-fa018a3c.js">
+	<link rel="modulepreload" href="/svelte-context-enhanced/_app/chunks/vendor-32dd28f6.js">
+	<link rel="modulepreload" href="/svelte-context-enhanced/_app/chunks/paths-396f020f.js">
+	<link rel="modulepreload" href="/svelte-context-enhanced/_app/chunks/preload-helper-413b0d67.js">
+	<link rel="modulepreload" href="/svelte-context-enhanced/_app/pages/__layout.svelte-10d1d885.js">
+	<link rel="modulepreload" href="/svelte-context-enhanced/_app/chunks/stores-38b87635.js">
+	<link rel="modulepreload" href="/svelte-context-enhanced/_app/pages/store/index.svelte-69443590.js">
+	<link rel="modulepreload" href="/svelte-context-enhanced/_app/chunks/CopyButton-c47b43e8.js">
+	<link rel="modulepreload" href="/svelte-context-enhanced/_app/chunks/PageContentsNavItem-486ccfab.js">
+	</head>
+	<body>
+		<div id="#svelte">
+
+
+
+
+
+
+
+
+<div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<aside id="@smui/drawer/Drawer:4" class="svmd-site-drawer mdc-drawer mdc-drawer--open">
+
+
+
+<div class="mdc-drawer__content">
+
+
+
+
+
+<nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="@smui/drawer/nav-list/NavList:4" class="mdc-list mdc-list--textual-list" aria-orientation="vertical">
+
+
+
+
+
+
+
+
+
+
+
+
+<li id="@smui/list/Item:36">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="mdc-list-item mdc-list-item--with-one-line mdc-ripple-upgraded" href="/svelte-context-enhanced/" aria-selected="false" aria-disabled="false">
+
+
+
+<span class="mdc-list-item__ripple"></span>
+
+		
+
+
+
+<span class="mdc-list-item__content">
+
+
+
+<span class="mdc-list-item__primary-text">Main Page</span>
+					</span>
+				</a>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+<li id="@smui/list/Item:37">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="mdc-list-item mdc-list-item--with-one-line mdc-ripple-upgraded" href="/svelte-context-enhanced/basic" aria-selected="false" aria-disabled="false">
+
+
+
+<span class="mdc-list-item__ripple"></span>
+
+		
+
+
+
+<span class="mdc-list-item__content">
+
+
+
+<span class="mdc-list-item__primary-text">Basic Usage</span>
+					</span>
+				</a>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+<li id="@smui/list/Item:38">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="mdc-list-item mdc-list-item--with-one-line mdc-ripple-upgraded" href="/svelte-context-enhanced/store" aria-selected="false" aria-disabled="false">
+
+
+
+<span class="mdc-list-item__ripple"></span>
+
+		
+
+
+
+<span class="mdc-list-item__content">
+
+
+
+<span class="mdc-list-item__primary-text">Context Store</span>
+					</span>
+				</a>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+<li id="@smui/list/Item:39">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="mdc-list-item mdc-list-item--with-one-line mdc-ripple-upgraded" href="/svelte-context-enhanced/advanced" aria-selected="false" aria-disabled="false">
+
+
+
+<span class="mdc-list-item__ripple"></span>
+
+		
+
+
+
+<span class="mdc-list-item__content">
+
+
+
+<span class="mdc-list-item__primary-text">Advanced Usage</span>
+					</span>
+				</a>
+
+
+
+
+
+
+</li></ul></nav>
+
+</div></aside>
+
+
+
+
+	
+
+
+
+<div class="mdc-drawer-app-content">
+	
+
+
+
+<div class="svelte-wmpop3">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header id="@svmd/top-app-bar/TopAppBar:4" class="top-app-bar mdc-top-app-bar"><div class="mdc-top-app-bar__row">
+
+
+
+<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+			
+
+
+
+
+
+
+
+<span class="mdc-top-app-bar__title">Svelte Typed Context</span></section></div></header>
+<div class="mdc-top-app-bar--fixed-adjust"><main class="svelte-1mrd196"><div class="svelte-nxbnxc"><div class="page-title svelte-1q0bw52">
+
+
+
+
+
+
+
+<h1 id="usage" class="mdc-typography--headline1">Context Store</h1>
+
+
+</div>
+		<p>With <code>createContextStore</code> and
+			<code>createContextWritableStore</code> you can can take advantage of typings
+			when using Svelte&#39;s store as context value.
+		</p>
+
+		<div class="svelte-ihxb8l"><code class="svelte-ihxb8l">BasicExample.svelte</code>
+	<div class="shell-snippet-wrapper svelte-s39vp1"><div><code style="display:none"></code>
+
+<pre class="language-svelte" command-line data-output="2-17"><code class="language-svelte"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ts<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">import</span> <span class="token punctuation">{</span> readable <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"svelte/store"</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">import</span> StoreExampleChild <span class="token keyword">from</span> <span class="token string">"./StoreExampleChild.svelte"</span><span class="token punctuation">;</span>
+	<span class="token keyword">import</span> <span class="token punctuation">{</span> setCounterContext<span class="token punctuation">,</span> setTimeContext <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./StoreExampleContext"</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">const</span> <span class="token function-variable function">getCurrentTime</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span>
+		<span class="token keyword">typeof</span> window <span class="token operator">!==</span> <span class="token string">"undefined"</span> <span class="token operator">&amp;&amp;</span>
+		<span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toLocaleTimeString</span><span class="token punctuation">(</span>navigator<span class="token punctuation">.</span>language<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+			<span class="token literal-property property">timeStyle</span><span class="token operator">:</span> <span class="token string">"medium"</span><span class="token punctuation">,</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">const</span> time$ <span class="token operator">=</span> <span class="token function">setTimeContext</span><span class="token punctuation">(</span><span class="token function">getCurrentTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">set</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+		<span class="token keyword">const</span> interval <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">set</span><span class="token punctuation">(</span><span class="token function">getCurrentTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">clearInterval</span><span class="token punctuation">(</span>interval<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">const</span> counter$ <span class="token operator">=</span> <span class="token function">setCounterContext</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token language-javascript"><span class="token punctuation">{</span>$time$<span class="token punctuation">}</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span>
+<span class="token language-javascript"><span class="token punctuation">{</span>$counter$<span class="token punctuation">}</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span>
+Child:
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>StoreExampleChild</span> <span class="token punctuation">/></span></span>
+<!-- HTML_TAG_END --></code></pre></div>
+	<div class="code-commands svelte-s39vp1"><div class="copy-button-wrapper svelte-2c736f">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button id="@svelte-material-design/button/IconButton:10" class="copy-button mdc-icon-button mdc-ripple-upgraded">
+
+
+
+
+
+
+
+
+
+
+
+<i class="mdc-icon-button__icon material-icons">content_copy</i></button>
+
+
+
+
+
+
+
+
+
+</div></div></div>
+
+
+</div>
+
+		<div class="svelte-ihxb8l"><code class="svelte-ihxb8l">BasicExampleChild.svelte</code>
+	<div class="shell-snippet-wrapper svelte-s39vp1"><div><code style="display:none"></code>
+
+<pre class="language-svelte" command-line data-output="2-17"><code class="language-svelte"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ts<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">import</span> <span class="token punctuation">{</span> getCounterContext<span class="token punctuation">,</span> getTimeContext <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./StoreExampleContext"</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">const</span> counter$ <span class="token operator">=</span> <span class="token function">getCounterContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">const</span> time$ <span class="token operator">=</span> <span class="token function">getTimeContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token language-javascript"><span class="token punctuation">{</span>$time$<span class="token punctuation">}</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> $counter$<span class="token operator">++</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span>add<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+<!-- HTML_TAG_END --></code></pre></div>
+	<div class="code-commands svelte-s39vp1"><div class="copy-button-wrapper svelte-2c736f">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button id="@svelte-material-design/button/IconButton:11" class="copy-button mdc-icon-button mdc-ripple-upgraded">
+
+
+
+
+
+
+
+
+
+
+
+<i class="mdc-icon-button__icon material-icons">content_copy</i></button>
+
+
+
+
+
+
+
+
+
+</div></div></div>
+
+
+</div>
+
+		<div class="svelte-ihxb8l"><code class="svelte-ihxb8l">BasicExampleContext.ts</code>
+	<div class="shell-snippet-wrapper svelte-s39vp1"><div><code style="display:none"></code>
+
+<pre class="language-ts" command-line data-output="2-17"><code class="language-ts"><!-- HTML_TAG_START --><span class="token keyword">import</span> <span class="token punctuation">{</span>
+	createContextStore<span class="token punctuation">,</span>
+	createContextWritableStore<span class="token punctuation">,</span>
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@raythurnevoid/svelte-context-enhanced"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token punctuation">[</span>setCounterContext<span class="token punctuation">,</span> getCounterContext<span class="token punctuation">]</span> <span class="token operator">=</span>
+	<span class="token generic-function"><span class="token function">createContextWritableStore</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token builtin">number</span><span class="token operator">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token punctuation">[</span>setTimeContext<span class="token punctuation">,</span> getTimeContext<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token generic-function"><span class="token function">createContextStore</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token operator">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<!-- HTML_TAG_END --></code></pre></div>
+	<div class="code-commands svelte-s39vp1"><div class="copy-button-wrapper svelte-2c736f">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button id="@svelte-material-design/button/IconButton:12" class="copy-button mdc-icon-button mdc-ripple-upgraded">
+
+
+
+
+
+
+
+
+
+
+
+<i class="mdc-icon-button__icon material-icons">content_copy</i></button>
+
+
+
+
+
+
+
+
+
+</div></div></div>
+
+
+</div>
+
+		<div class="section-title svelte-12968tv">
+
+
+
+
+
+
+
+<h2 id="result" class="mdc-typography--headline2">Result</h2>
+
+
+</div>
+		<div class="svelte-uzctd">false
+<br>
+0
+
+<br>
+<br>
+Child:
+<br>
+false
+<br>
+<button>add</button>
+</div>
+
+		<div class="section-title svelte-12968tv">
+
+
+
+
+
+
+
+<h2 id="api" class="mdc-typography--headline2">API</h2>
+
+
+</div>
+		<p>Both <code>createContextStore</code> and
+			<code>createContextWritableStore</code> are proxies to Svelte&#39;s
+			<code>readable</code>
+			and <code>writable</code> stores, because of that they share the same API.
+		</p>
+		<p><div class="shell-snippet-wrapper svelte-s39vp1"><div><code style="display:none"></code>
+
+<pre class="language-ts" command-line data-output="2-17"><code class="language-ts"><!-- HTML_TAG_START --><span class="token keyword">import</span> <span class="token punctuation">{</span> readable <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"svelte/store"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token keyword">type</span> <span class="token punctuation">{</span> Writable<span class="token punctuation">,</span> Readable<span class="token punctuation">,</span> StartStopNotifier <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"svelte/store"</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">declare</span> <span class="token keyword">function</span> <span class="token generic-function"><span class="token function">createContextWritableStore</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">readonly</span> <span class="token punctuation">[</span><span class="token punctuation">(</span>value<span class="token operator">?</span><span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">,</span> start<span class="token operator">?</span><span class="token operator">:</span> StartStopNotifier<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token operator">=></span> Writable<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">></span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> Writable<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">></span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">declare</span> <span class="token keyword">function</span> <span class="token generic-function"><span class="token function">createContextStore</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">readonly</span> <span class="token punctuation">[</span><span class="token keyword">typeof</span> readable<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> Readable<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">></span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<!-- HTML_TAG_END --></code></pre></div>
+	<div class="code-commands svelte-s39vp1"><div class="copy-button-wrapper svelte-2c736f">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button id="@svelte-material-design/button/IconButton:13" class="copy-button mdc-icon-button mdc-ripple-upgraded">
+
+
+
+
+
+
+
+
+
+
+
+<i class="mdc-icon-button__icon material-icons">content_copy</i></button>
+
+
+
+
+
+
+
+
+
+</div></div></div>
+
+</p>
+		<footer class="svelte-zamp0f"><div class="content svelte-zamp0f"><div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a id="@svmd/button/Button:4" class="mdc-button mdc-button--outlined mdc-ripple-upgraded" href="/svelte-context-enhanced/basic"><div class="mdc-button__ripple"></div>
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+<i class="mdc-button__icon material-icons" aria-hidden>arrow_back</i>
+					
+
+
+
+<span class="mdc-button__label">BASIC USAGE</span>
+		</a>
+
+
+
+
+
+
+</div>
+		<div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a id="@svmd/button/Button:5" class="mdc-button mdc-button--raised mdc-ripple-upgraded" href="/svelte-context-enhanced/advanced"><div class="mdc-button__ripple"></div>
+		
+		
+		
+
+
+
+<span class="mdc-button__label">ADVANCED USAGE</span>
+					
+
+
+
+
+
+
+
+
+
+
+
+<i class="mdc-button__icon material-icons" aria-hidden>arrow_forward</i>
+		</a>
+
+
+
+
+
+
+</div></div>
+</footer>
+</div>
+	<div class="page-contents-nav" aria-labelledby="page-contents-nav__heading"><nav class="svelte-1o21c7h">
+
+
+
+
+
+
+
+<span id="page-contents-nav__heading" class="mdc-typography--overline">Contents
+		</span>
+
+
+		<ul class="svelte-1o21c7h"></ul></nav>
+</div>
+</main></div>
+</div></div></div>
+
+
+
+
+		<script type="module" data-hydrate="maanwj">
+		import { start } from "/svelte-context-enhanced/_app/start-fa018a3c.js";
+		start({
+			target: document.querySelector('[data-hydrate="maanwj"]').parentNode,
+			paths: {"base":"/svelte-context-enhanced","assets":"/svelte-context-enhanced"},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/svelte-context-enhanced/_app/pages/__layout.svelte-10d1d885.js"),
+						import("/svelte-context-enhanced/_app/pages/store/index.svelte-69443590.js")
+				],
+				params: {},
+				routeId: "store"
+			}
+		});
+	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/svelte-context-enhanced/api/get-file-content.bm9kZV9tb2R1bGVzL0ByYXl0aHVybmV2b2lkL3N2ZWx0ZS1jb250ZXh0LWVuaGFuY2VkL3N0b3JlLmQudHM%3D">{"status":200,"statusText":"","headers":{"content-type":"text/plain;charset=UTF-8"},"body":"import { readable } from \"svelte/store\";\r\nimport type { Writable, Readable, StartStopNotifier } from \"svelte/store\";\r\nexport declare function createContextWritableStore\u003CT>(): readonly [(value?: T, start?: StartStopNotifier\u003CT>) => Writable\u003CT>, () => Writable\u003CT>];\r\nexport declare function createContextStore\u003CT>(): readonly [typeof readable, () => Readable\u003CT>];\r\n"}</script>
+	<script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/svelte-context-enhanced/api/get-file-content.c3JjL2xpYi9jb21wb25lbnRzL2V4YW1wbGVzL3N0b3JlL1N0b3JlRXhhbXBsZS5zdmVsdGU%3D">{"status":200,"statusText":"","headers":{"content-type":"text/plain;charset=UTF-8"},"body":"\u003Cscript lang=\"ts\">\r\n\timport { readable } from \"svelte/store\";\r\n\r\n\timport StoreExampleChild from \"./StoreExampleChild.svelte\";\r\n\timport { setCounterContext, setTimeContext } from \"./StoreExampleContext\";\r\n\r\n\tconst getCurrentTime = () =>\r\n\t\ttypeof window !== \"undefined\" &&\r\n\t\tnew Date().toLocaleTimeString(navigator.language, {\r\n\t\t\ttimeStyle: \"medium\",\r\n\t\t});\r\n\r\n\tconst time$ = setTimeContext(getCurrentTime(), (set) => {\r\n\t\tconst interval = setInterval(() => set(getCurrentTime()), 1000);\r\n\t\treturn () => clearInterval(interval);\r\n\t});\r\n\r\n\tconst counter$ = setCounterContext(0);\r\n\u003C/script>\r\n\r\n{$time$}\r\n\u003Cbr />\r\n{$counter$}\r\n\r\n\u003Cbr />\r\n\u003Cbr />\r\nChild:\r\n\u003Cbr />\r\n\u003CStoreExampleChild />\r\n"}</script>
+	<script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/svelte-context-enhanced/api/get-file-content.c3JjL2xpYi9jb21wb25lbnRzL2V4YW1wbGVzL3N0b3JlL1N0b3JlRXhhbXBsZUNoaWxkLnN2ZWx0ZQ%3D%3D">{"status":200,"statusText":"","headers":{"content-type":"text/plain;charset=UTF-8"},"body":"\u003Cscript lang=\"ts\">\r\n\timport { getCounterContext, getTimeContext } from \"./StoreExampleContext\";\r\n\r\n\tconst counter$ = getCounterContext();\r\n\tconst time$ = getTimeContext();\r\n\u003C/script>\r\n\r\n{$time$}\r\n\u003Cbr />\r\n\u003Cbutton on:click={() => $counter$++}>add\u003C/button>\r\n"}</script>
+	<script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/svelte-context-enhanced/api/get-file-content.c3JjL2xpYi9jb21wb25lbnRzL2V4YW1wbGVzL3N0b3JlL1N0b3JlRXhhbXBsZUNvbnRleHQudHM%3D">{"status":200,"statusText":"","headers":{"content-type":"text/plain;charset=UTF-8"},"body":"import {\r\n\tcreateContextStore,\r\n\tcreateContextWritableStore,\r\n} from \"@raythurnevoid/svelte-context-enhanced\";\r\n\r\nexport const [setCounterContext, getCounterContext] =\r\n\tcreateContextWritableStore\u003Cnumber>();\r\n\r\nexport const [setTimeContext, getTimeContext] = createContextStore\u003Cstring>();\r\n"}</script></div>
+	</body>
+</html>
