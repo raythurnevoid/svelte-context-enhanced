@@ -27,5 +27,6 @@ export async function getFileContent(
 	const res = await fetch(
 		`${base}/api/get-file-content.${encodeURIComponent(base64Path)}`
 	);
-	return await res.text();
+	const text = await res.text();
+	return text;
 }

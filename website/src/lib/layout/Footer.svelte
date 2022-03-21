@@ -4,7 +4,7 @@
 		Label,
 		TrailingIcon,
 		LeadingIcon,
-	} from "@svelte-material-design/core/button";
+	} from "@svelte-material-ui-test/core/button";
 
 	export let prev: Link = undefined;
 	export let next: Link = undefined;

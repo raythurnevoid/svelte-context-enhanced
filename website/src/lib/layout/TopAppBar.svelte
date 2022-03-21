@@ -7,7 +7,7 @@
 		Title,
 		NavigationIcon,
 		Icon,
-	} from "@svelte-material-design/core/top-app-bar";
+	} from "@svelte-material-ui-test/core/top-app-bar";
 	import { createEventDispatcher } from "svelte";
 
 	const dispatch = createEventDispatcher();

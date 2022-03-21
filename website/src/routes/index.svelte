@@ -6,7 +6,7 @@
 		async function getHowToUseSource() {
 			return await getFileContent(
 				fetch,
-				"src/components/examples/basic/BasicExampleContext.ts"
+				"src/lib/components/examples/basic/BasicExampleContext.ts"
 			);
 		}
 
@@ -19,8 +19,8 @@
 </script>
 
 <script lang="ts">
-	import { PageTitle, SectionTitle, Code } from "#src/components/main/index";
-	import { PageContent, Footer, ModulePage } from "#src/layout/index";
+	import { PageTitle, SectionTitle, Code } from "$lib/components/main/index";
+	import { PageContent, Footer, ModulePage } from "$lib/layout/index";
 	import { base } from "$app/paths";
 
 	export let howToUseSource: string;

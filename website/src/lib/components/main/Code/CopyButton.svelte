@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { IconButton, Icon } from "@svelte-material-design/core/icon-button";
+	import { IconButton, Icon } from "@svelte-material-ui-test/core/icon-button";
 
 	export let el: HTMLElement;
 

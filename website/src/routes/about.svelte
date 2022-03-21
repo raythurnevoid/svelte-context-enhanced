@@ -2,4 +2,4 @@
 	import { page } from "$app/stores";
 </script>
 
-{$page.path}
+{$page.url.pathname}

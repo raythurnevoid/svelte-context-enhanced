@@ -13,21 +13,21 @@
 		async function getExampleSource() {
 			return await getFileContent(
 				fetch,
-				"src/components/examples/basic/BasicExample.svelte"
+				"src/lib/components/examples/basic/BasicExample.svelte"
 			);
 		}
 
 		async function getExampleChildSource() {
 			return await getFileContent(
 				fetch,
-				"src/components/examples/basic/BasicExampleChild.svelte"
+				"src/lib/components/examples/basic/BasicExampleChild.svelte"
 			);
 		}
 
 		async function getExampleContextSource() {
 			return await getFileContent(
 				fetch,
-				"src/components/examples/basic/BasicExampleContext.ts"
+				"src/lib/components/examples/basic/BasicExampleContext.ts"
 			);
 		}
 
@@ -47,11 +47,11 @@
 		PageTitle,
 		SectionTitle,
 		ExampleContainer,
-	} from "#src/components/main/index";
-	import { Code, FileSourceSnippet } from "#src/components/main/Code/index";
-	import { PageContent, Footer, ModulePage } from "#src/layout/index";
-	import { PageContentsNav } from "#src/layout/PageContentNav/index";
-	import { BasicExample } from "#src/components/examples/basic/index";
+	} from "$lib/components/main/index";
+	import { Code, FileSourceSnippet } from "$lib/components/main/Code/index";
+	import { PageContent, Footer, ModulePage } from "$lib/layout/index";
+	import { PageContentsNav } from "$lib/layout/PageContentNav/index";
+	import { BasicExample } from "$lib/components/examples/basic/index";
 	import { base } from "$app/paths";
 
 	export let exampleSource: string;

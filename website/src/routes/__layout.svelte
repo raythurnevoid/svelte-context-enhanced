@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Layout } from "../layout/index";
+	import { Layout } from "$lib/layout/index";
 	import "../app.css";
 	import { onMount } from "svelte";
 

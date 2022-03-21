@@ -8,7 +8,7 @@
 		NavItem,
 		NavItemContent,
 		PrimaryText,
-	} from "@svelte-material-design/core/drawer";
+	} from "@svelte-material-ui-test/core/drawer";
 	import { page } from "$app/stores";
 	import { base } from "$app/paths";
 
@@ -23,7 +23,7 @@
 	].map((link) => {
 		return {
 			...link,
-			activated: base + $page.path === link.href,
+			activated: base + $page.url.pathname === link.href,
 		};
 	});
 </script>

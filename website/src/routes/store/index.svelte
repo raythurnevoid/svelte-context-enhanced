@@ -13,21 +13,21 @@
 		async function getExampleSource() {
 			return await getFileContent(
 				fetch,
-				"src/components/examples/store/StoreExample.svelte"
+				"src/lib/components/examples/store/StoreExample.svelte"
 			);
 		}
 
 		async function getExampleChildSource() {
 			return await getFileContent(
 				fetch,
-				"src/components/examples/store/StoreExampleChild.svelte"
+				"src/lib/components/examples/store/StoreExampleChild.svelte"
 			);
 		}
 
 		async function getExampleContextSource() {
 			return await getFileContent(
 				fetch,
-				"src/components/examples/store/StoreExampleContext.ts"
+				"src/lib/components/examples/store/StoreExampleContext.ts"
 			);
 		}
 
@@ -47,11 +47,11 @@
 		PageTitle,
 		SectionTitle,
 		ExampleContainer,
-	} from "#src/components/main/index";
-	import { Code, FileSourceSnippet } from "#src/components/main/Code/index";
-	import { PageContent, Footer, ModulePage } from "#src/layout/index";
-	import { PageContentsNav } from "#src/layout/PageContentNav/index";
-	import { StoreExample } from "#src/components/examples/store/index";
+	} from "$lib/components/main/index";
+	import { Code, FileSourceSnippet } from "$lib/components/main/Code/index";
+	import { PageContent, Footer, ModulePage } from "$lib/layout/index";
+	import { PageContentsNav } from "$lib/layout/PageContentNav/index";
+	import { StoreExample } from "$lib/components/examples/store/index";
 	import { base } from "$app/paths";
 
 	export let exampleSource: string;
@@ -97,7 +97,7 @@
 			<Code lang="ts" source={typingsSource} />
 		</p>
 		<Footer
-			prev={{ label: "BASIC USAGE", href: `${base}basic` }}
+			prev={{ label: "BASIC USAGE", href: `${base}/basic` }}
 			next={{ label: "ADVANCED USAGE", href: `${base}/advanced` }}
 		/>
 	</PageContent>

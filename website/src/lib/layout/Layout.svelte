@@ -3,7 +3,7 @@
 <script lang="ts">
 	import { onMount, onDestroy } from "svelte";
 	import { TopAppBar, Drawer } from ".";
-	import { AppContent } from "@svelte-material-design/core/drawer";
+	import { AppContent } from "@svelte-material-ui-test/core/drawer";
 
 	let open: boolean = true;
 	let dismissible: boolean = false;

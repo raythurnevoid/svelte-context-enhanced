@@ -38,7 +38,7 @@
 </script>
 
 <script lang="ts">
-	import { Typography } from "@svelte-material-design/core/typography";
+	import { Typography } from "@svelte-material-ui-test/core/typography";
 	import { PageContentsNavItem } from "./index";
 	import { onMount, tick } from "svelte";
 

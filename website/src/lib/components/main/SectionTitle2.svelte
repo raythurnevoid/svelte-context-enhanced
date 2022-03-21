@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Typography } from "@svelte-material-design/core/typography/index.js";
+	import { Typography } from "@svelte-material-ui-test/core/typography";
 </script>
 
 <div class="page-title">

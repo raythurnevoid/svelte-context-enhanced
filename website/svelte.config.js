@@ -1,5 +1,5 @@
-import preprocess from "svelte-preprocess";
 import adapter from "@sveltejs/adapter-static";
+import preprocess from "svelte-preprocess";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { resolve } from "path";
 import { viteCommonjs } from "@originjs/vite-plugin-commonjs";
@@ -30,22 +30,28 @@ const config = {
 			includePaths: scssIncludePaths,
 		},
 	}),
-
 	kit: {
-		// hydrate the <div id="svelte"> element in src/app.html
-		target: "#svelte",
 		adapter: adapter({
 			// default options are shown
 			pages: "build",
 			assets: "build",
 			fallback: null,
 		}),
-		ssr: isProduction(),
+
+		// Override http methods in the Todo forms
+		methodOverride: {
+			allowed: ["PATCH", "DELETE"],
+		},
+
 		paths: {
 			base,
 		},
+
+		prerender: {
+			default: true,
+		},
+
 		vite: {
-			base,
 			plugins: [tsconfigPaths(), viteCommonjs()],
 			server: {
 				force: true,
@@ -58,7 +64,12 @@ const config = {
 				],
 			},
 			resolve: {
-				alias: [{ find: /^#src\/(.+)/, replacement: "src/$1" }],
+				alias: [
+					{
+						find: /^@svelte-material-design\/(.+)/,
+						replacement: "@svelte-material-ui-test/core/packages/$1",
+					},
+				],
 				// alias: [{ find: /^#src\/(.+)\.js$/, replacement: "src/$1" }], breaks vite
 			},
 			ssr: {

@@ -13,21 +13,21 @@
 		async function getExampleSource() {
 			return await getFileContent(
 				fetch,
-				"src/components/examples/advanced/AdvancedExample.svelte"
+				"src/lib/components/examples/advanced/AdvancedExample.svelte"
 			);
 		}
 
 		async function getExampleChildSource() {
 			return await getFileContent(
 				fetch,
-				"src/components/examples/advanced/AdvancedExampleChild.svelte"
+				"src/lib/components/examples/advanced/AdvancedExampleChild.svelte"
 			);
 		}
 
 		async function getExampleContextSource() {
 			return await getFileContent(
 				fetch,
-				"src/components/examples/advanced/AdvancedExampleContext.ts"
+				"src/lib/components/examples/advanced/AdvancedExampleContext.ts"
 			);
 		}
 
@@ -47,11 +47,11 @@
 		PageTitle,
 		SectionTitle,
 		ExampleContainer,
-	} from "#src/components/main/index";
-	import { Code, FileSourceSnippet } from "#src/components/main/Code/index";
-	import { PageContent, Footer, ModulePage } from "#src/layout/index";
-	import { PageContentsNav } from "#src/layout/PageContentNav/index";
-	import { AdvancedExample } from "#src/components/examples/advanced/index";
+	} from "$lib/components/main/index";
+	import { Code, FileSourceSnippet } from "$lib/components/main/Code/index";
+	import { PageContent, Footer, ModulePage } from "$lib/layout/index";
+	import { PageContentsNav } from "$lib/layout/PageContentNav/index";
+	import { AdvancedExample } from "$lib/components/examples/advanced/index";
 	import { base } from "$app/paths";
 
 	export let exampleSource: string;
