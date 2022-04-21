@@ -38,6 +38,6 @@
 		"nodemon": "^2.0.15"
 	},
 	"dependencies": {
-		"svelte": "^3.46.2"
+		"svelte": "^3.47.0"
 	}
 }

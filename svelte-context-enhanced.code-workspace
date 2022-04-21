@@ -19,15 +19,15 @@
 		},
 		"prettier.useTabs": true,
 		"prettier.singleQuote": false,
+		"editor.tabSize": 2,
+		"editor.detectIndentation": false,
 		"editor.formatOnSave": true,
 		"editor.insertSpaces": false,
+		"files.eol": "\n",
 		"typescript.tsdk": "node_modules\\typescript\\lib",
 		"typescript.preferences.importModuleSpecifier": "relative",
 		"typescript.preferences.importModuleSpecifierEnding": "js",
-		"javascript.preferences.importModuleSpecifierEnding": "js",
-		"[files.associations]": {
-			"*.svelte.html": "svelte"
-		},
+		"typescript.enablePromptUseWorkspaceTsdk": true
 	},
 	"extensions": {
 		"recommendations": [
