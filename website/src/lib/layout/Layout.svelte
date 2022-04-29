@@ -45,8 +45,8 @@
 
 <style lang="scss">
 	.Layout {
-		:global {
-			&:not(.loaded) {
+		&:not(.loaded) {
+			:global {
 				.Drawer {
 					@media screen and (max-width: 960px) {
 						display: none;
@@ -59,7 +59,9 @@
 					}
 				}
 			}
+		}
 
+		:global {
 			.Layout__app-content {
 				@media screen and (min-width: #{960px + 1}) {
 					margin-left: 256px;
