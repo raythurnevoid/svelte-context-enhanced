@@ -37,10 +37,7 @@
 	<Drawer {dismissible} bind:open />
 	{#if dismissible}<Scrim />{/if}
 	<AppContent class="Layout__app-content">
-		<TopAppBar
-			showMenuBtn={dismissible}
-			on:navButtonClick={() => (open = true)}
-		>
+		<TopAppBar on:navButtonClick={() => (open = true)}>
 			<slot />
 		</TopAppBar>
 	</AppContent>
@@ -48,12 +45,24 @@
 
 <style lang="scss">
 	.Layout {
-		&:not(.loaded) {
-			:global {
+		:global {
+			&:not(.loaded) {
 				.Drawer {
 					@media screen and (max-width: 960px) {
 						display: none;
 					}
+				}
+
+				.Layout__app-content {
+					@media screen and (max-width: 960px) {
+						margin-left: 0 !important;
+					}
+				}
+			}
+
+			.Layout__app-content {
+				@media screen and (min-width: #{960px + 1}) {
+					margin-left: 256px;
 				}
 			}
 		}

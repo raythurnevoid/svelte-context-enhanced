@@ -22,11 +22,7 @@
 	});
 </script>
 
-<Drawer
-	class="Drawer mdc-drawer--open"
-	variant={dismissible ? "modal" : undefined}
-	bind:open
->
+<Drawer class="Drawer" variant={dismissible ? "modal" : undefined} bind:open>
 	<Content>
 		<List>
 			{#each links as link}

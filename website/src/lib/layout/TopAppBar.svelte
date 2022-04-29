@@ -15,8 +15,6 @@
 
 	const dispatch = createEventDispatcher();
 
-	export let showMenuBtn: boolean = false;
-
 	let topAppBar: TopAppBarComponentDev;
 </script>
 
@@ -24,12 +22,12 @@
 	<TopAppBar bind:this={topAppBar} variant="standard">
 		<Row>
 			<Section>
-				{#if showMenuBtn}
+				<div class="menu-button-wrapper">
 					<IconButton
 						class="material-icons"
 						on:click={() => dispatch("navButtonClick")}>menu</IconButton
 					>
-				{/if}
+				</div>
 				<Title>Svelte Typed Context</Title>
 			</Section>
 		</Row>
@@ -49,6 +47,14 @@
 				@include elevation.elevation(4);
 				@include top-app-bar.ink-color(white);
 			}
+		}
+	}
+
+	.menu-button-wrapper {
+		display: inline-flex;
+
+		@media screen and (min-width: #{960px + 1}) {
+			display: none;
 		}
 	}
 </style>
