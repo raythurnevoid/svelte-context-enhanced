@@ -19,13 +19,6 @@
 </Layout>
 
 <style lang="scss" global>
-	// @use "app.scss";
-	// @use "smui.css";
-	// @use "@fontsource/material-icons/scss/mixins" as MaterialIcons;
-	// @use "@fontsource/roboto/scss/mixins" as Roboto;
-
-	// @include Roboto.fontFace();
-
 	html.smooth-scroll {
 		scroll-behavior: smooth;
 	}

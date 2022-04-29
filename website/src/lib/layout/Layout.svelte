@@ -8,11 +8,16 @@
 	let open: boolean = false;
 	let dismissible: boolean = false;
 
+	let loaded: boolean = false;
 	let tabletMedia: MediaQueryList;
 	onMount(() => {
 		tabletMedia = window.matchMedia("(max-width: 960px)");
 		tabletMedia.addEventListener("change", handleTabletMediaChange);
 		handleTabletMediaChange();
+
+		window.requestIdleCallback(() => {
+			loaded = true;
+		});
 	});
 
 	onDestroy(() => {
@@ -28,7 +33,7 @@
 	}
 </script>
 
-<div class="Layout">
+<div class="Layout" class:loaded>
 	<Drawer {dismissible} bind:open />
 	{#if dismissible}<Scrim />{/if}
 	<AppContent class="Layout__app-content">
@@ -40,3 +45,17 @@
 		</TopAppBar>
 	</AppContent>
 </div>
+
+<style lang="scss">
+	.Layout {
+		&:not(.loaded) {
+			:global {
+				.Drawer {
+					@media screen and (max-width: 960px) {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+</style>

@@ -23,7 +23,7 @@
 </script>
 
 <Drawer
-	class="mdc-drawer--open"
+	class="Drawer mdc-drawer--open"
 	variant={dismissible ? "modal" : undefined}
 	bind:open
 >
