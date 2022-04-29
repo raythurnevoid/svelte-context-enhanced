@@ -1,3 +1,5 @@
+<svelte:options immutable={true} />
+
 <script lang="ts">
 	import { Code } from "./index";
 
@@ -6,7 +8,7 @@
 	export let fileName: string;
 
 	if (!lang) {
-		const inferredLang = fileName.match(/\.(\w+$)/)[1] as typeof lang;
+		const inferredLang = fileName.match(/\.(\w+$)/)?.[1] as typeof lang;
 		if (inferredLang === "ts" || inferredLang === "svelte") {
 			lang = inferredLang;
 		}

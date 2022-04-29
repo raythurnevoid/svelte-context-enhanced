@@ -1,13 +1,10 @@
-<script lang="ts">
-	import {
-		Button,
-		Label,
-		TrailingIcon,
-		LeadingIcon,
-	} from "@svelte-material-ui-test/core/button";
+<svelte:options immutable={true} />
 
-	export let prev: Link = undefined;
-	export let next: Link = undefined;
+<script lang="ts">
+	import Button, { Label, Icon } from "@smui/button";
+
+	export let prev: Link | undefined = undefined;
+	export let next: Link | undefined = undefined;
 
 	interface Link {
 		href: string;
@@ -20,7 +17,7 @@
 		<div>
 			{#if prev}
 				<Button variant="outlined" href={prev.href}>
-					<LeadingIcon>arrow_back</LeadingIcon>
+					<Icon class="material-icons">arrow_back</Icon>
 					<Label>{prev.label}</Label>
 				</Button>
 			{/if}
@@ -29,7 +26,7 @@
 			{#if next}
 				<Button variant="raised" href={next.href}>
 					<Label>{next.label}</Label>
-					<TrailingIcon>arrow_forward</TrailingIcon>
+					<Icon class="material-icons">arrow_forward</Icon>
 				</Button>
 			{/if}
 		</div>

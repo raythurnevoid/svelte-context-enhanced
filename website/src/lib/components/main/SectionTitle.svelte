@@ -1,17 +1,17 @@
-<script lang="ts">
-	import { Typography } from "@svelte-material-ui-test/core/typography";
+<svelte:options immutable={true} />
 
-	export let id: string = undefined;
+<script lang="ts">
+	export let id: string | undefined = undefined;
 </script>
 
 <div class="section-title">
-	<Typography {id} variant="headline2">
+	<h2 class="mdc-typography--headline2" {id}>
 		<slot />
-	</Typography>
+	</h2>
 </div>
 
-<style lang="scss" global>
-	:local(.section-title) {
+<style lang="scss">
+	.section-title {
 		> h2 {
 			scroll-margin-block: calc(64px + 2em);
 		}

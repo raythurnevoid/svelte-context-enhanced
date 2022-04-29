@@ -3,7 +3,7 @@
 <script lang="ts">
 	import { onMount, onDestroy } from "svelte";
 	import { TopAppBar, Drawer } from ".";
-	import { AppContent } from "@svelte-material-ui-test/core/drawer";
+	import { AppContent, Scrim } from "@smui/drawer";
 
 	let open: boolean = true;
 	let dismissible: boolean = false;
@@ -28,18 +28,15 @@
 	}
 </script>
 
-<div>
+<div class="Layout">
 	<Drawer {dismissible} bind:open />
-
-	<AppContent>
+	{#if dismissible}<Scrim />{/if}
+	<AppContent class="Layout__app-content">
 		<TopAppBar
 			showMenuBtn={dismissible}
 			on:navButtonClick={() => (open = true)}
-			let:class={contentClass}
 		>
-			<div class={contentClass}>
-				<slot />
-			</div>
+			<slot />
 		</TopAppBar>
 	</AppContent>
 </div>

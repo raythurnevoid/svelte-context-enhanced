@@ -5,7 +5,7 @@
 
 	onMount(() => {
 		setTimeout(() => {
-			window.document.firstElementChild.classList.add("smooth-scroll");
+			window.document.firstElementChild?.classList.add("smooth-scroll");
 		});
 	});
 </script>
@@ -29,7 +29,6 @@
 	<slot />
 </Layout>
 
-<!-- <slot /> -->
 <style lang="scss" global>
 	@use "smui-theme.scss";
 	@use "@material/theme/styles.scss";

@@ -1,10 +1,10 @@
 import adapter from "@sveltejs/adapter-static";
 import preprocess from "svelte-preprocess";
 import tsconfigPaths from "vite-tsconfig-paths";
-import { resolve } from "path";
+import { resolve } from "node:path";
 import { viteCommonjs } from "@originjs/vite-plugin-commonjs";
-import { fileURLToPath } from "url";
-import { env } from "process";
+import { fileURLToPath } from "node:url";
+import { env } from "node:process";
 
 function isProduction() {
 	return env.NODE_ENV === "production";
@@ -52,11 +52,7 @@ const config = {
 				force: true,
 			},
 			optimizeDeps: {
-				exclude: [
-					"/node_modules/svelte/index.mjs",
-					"/node_modules/svelte/internal/index.mjs",
-					"/node_modules/svelte/store/index.mjs",
-				],
+				exclude: ["svelte", "svelte/internal", "svelte/store"],
 			},
 			resolve: {
 				alias: [

@@ -1,3 +1,5 @@
+<svelte:options immutable={true} />
+
 <style global>
 	@import "prismjs/themes/prism-tomorrow.css";
 

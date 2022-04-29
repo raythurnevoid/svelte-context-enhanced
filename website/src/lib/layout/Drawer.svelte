@@ -1,14 +1,8 @@
 <svelte:options immutable={true} />
 
 <script lang="ts">
-	import {
-		Drawer,
-		Content,
-		NavList,
-		NavItem,
-		NavItemContent,
-		PrimaryText,
-	} from "@svelte-material-ui-test/core/drawer";
+	import Drawer, { Content } from "@smui/drawer";
+	import List, { Item, Text } from "@smui/list";
 	import { page } from "$app/stores";
 	import { base } from "$app/paths";
 
@@ -29,25 +23,27 @@
 </script>
 
 <Drawer
-	class="svmd-site-drawer"
-	variant={dismissible ? "modal" : "permanent"}
+	class="mdc-drawer--open"
+	variant={dismissible ? "modal" : undefined}
 	bind:open
 >
 	<Content>
-		<NavList>
+		<List>
 			{#each links as link}
-				<NavItem href={link.href} activated={link.activated}>
-					<NavItemContent>
-						<PrimaryText>{link.label}</PrimaryText>
-					</NavItemContent>
-				</NavItem>
+				<Item href={link.href} activated={link.activated}>
+					<Text>
+						{link.label}
+					</Text>
+				</Item>
 			{/each}
-		</NavList>
+		</List>
 	</Content>
 </Drawer>
 
-<style lang="scss" global>
-	.svmd-site-drawer.svmd-site-drawer {
-		position: fixed;
+<style lang="scss">
+	:global {
+		.mdc-drawer {
+			position: fixed;
+		}
 	}
 </style>

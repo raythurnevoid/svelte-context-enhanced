@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { getActiveHashContextStore } from "./index";
 
-	let exportedHash: string = undefined;
+	let exportedHash: string | undefined = undefined;
 	export { exportedHash as hash };
 
 	const hash = exportedHash ? `#${exportedHash}` : undefined;

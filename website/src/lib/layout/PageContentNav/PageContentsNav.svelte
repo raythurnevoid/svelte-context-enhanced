@@ -7,7 +7,7 @@
 
 	function createActiveHashStore() {
 		const store$ = writable<string>(undefined);
-		let active: string = null;
+		let active: string = null!;
 		let isLocked: boolean = false;
 		let lockTimeout: ReturnType<typeof setTimeout>;
 
@@ -38,7 +38,6 @@
 </script>
 
 <script lang="ts">
-	import { Typography } from "@svelte-material-ui-test/core/typography";
 	import { PageContentsNavItem } from "./index";
 	import { onMount, tick } from "svelte";
 
@@ -56,7 +55,7 @@
 				const id = getId(item);
 				let label = getLabel(item);
 				if (!label) {
-					label = document.getElementById(id).textContent;
+					label = document.getElementById(id)?.textContent!;
 				}
 				return [id, label];
 			})
@@ -83,7 +82,7 @@
 		);
 
 		[...items.keys()].forEach((id) => {
-			observer.observe(window.document.querySelector(`#${id}`));
+			observer.observe(window.document.querySelector(`#${id}`)!);
 		});
 
 		setTimeout(async () => {
@@ -99,7 +98,7 @@
 
 	function findId(id: string) {
 		const item = [...items.keys()].find((item) => item === id);
-		return getId(item);
+		return getId(item!);
 	}
 
 	function getId(item: string | [string, string]) {
@@ -125,9 +124,9 @@
 
 <div class="page-contents-nav" aria-labelledby="page-contents-nav__heading">
 	<nav>
-		<Typography id="page-contents-nav__heading" variant="overline">
+		<span class="mdc-typography--overline" id="page-contents-nav__heading">
 			Contents
-		</Typography>
+		</span>
 		<ul>
 			{#if items}
 				{#each [...items] as [id, label]}

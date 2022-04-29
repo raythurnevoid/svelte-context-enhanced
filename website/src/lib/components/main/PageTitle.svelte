@@ -1,13 +1,13 @@
-<script lang="ts">
-	import { Typography } from "@svelte-material-ui-test/core/typography";
+<svelte:options immutable={true} />
 
-	export let id: string = undefined;
+<script lang="ts">
+	export let id: string | undefined = undefined;
 </script>
 
 <div class="page-title">
-	<Typography {id} variant="headline1">
+	<h1 class="mdc-typography--headline1" {id}>
 		<slot />
-	</Typography>
+	</h1>
 </div>
 
 <style lang="scss" global>

@@ -1,3 +1,5 @@
+<svelte:options immutable={true} />
+
 <script context="module" lang="ts">
 	import type { Load } from "@sveltejs/kit";
 	import { getFileContent } from "../utils";

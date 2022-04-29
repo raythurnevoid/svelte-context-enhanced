@@ -1,3 +1,5 @@
+<svelte:options immutable={true} />
+
 <script lang="ts">
 	import Prism from "svelte-prism";
 	import "prismjs/components/prism-typescript.js";
@@ -24,6 +26,12 @@
 <style lang="scss">
 	.shell-snippet-wrapper {
 		position: relative;
+
+		:global {
+			pre {
+				margin: 0;
+			}
+		}
 	}
 
 	.code-commands {

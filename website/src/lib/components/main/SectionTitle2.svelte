@@ -1,9 +1,7 @@
-<script lang="ts">
-	import { Typography } from "@svelte-material-ui-test/core/typography";
-</script>
+<svelte:options immutable={true} />
 
 <div class="page-title">
-	<Typography variant="headline3">
+	<h3 class="mdc-typography--headline3" variant="headline3">
 		<slot />
-	</Typography>
+	</h3>
 </div>

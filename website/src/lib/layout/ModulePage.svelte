@@ -1,3 +1,5 @@
+<svelte:options immutable={true} />
+
 <main>
 	<slot />
 </main>

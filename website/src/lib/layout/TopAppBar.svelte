@@ -1,42 +1,54 @@
 <svelte:options immutable={true} />
 
 <script lang="ts">
-	import {
-		TopAppBar,
+	import TopAppBar, {
+		Row,
 		Section,
 		Title,
-		NavigationIcon,
-		Icon,
-	} from "@svelte-material-ui-test/core/top-app-bar";
+		AutoAdjust,
+	} from "@smui/top-app-bar";
+	import type { TopAppBarComponentDev } from "@smui/top-app-bar";
+	import { Div } from "@smui/common/elements";
+
+	import IconButton from "@smui/icon-button";
 	import { createEventDispatcher } from "svelte";
 
 	const dispatch = createEventDispatcher();
 
 	export let showMenuBtn: boolean = false;
+
+	let topAppBar: TopAppBarComponentDev;
 </script>
 
-<div>
-	<TopAppBar class={"top-app-bar"} let:contentClass>
-		<Section>
-			{#if showMenuBtn}
-				<NavigationIcon on:click={() => dispatch("navButtonClick")}>
-					<Icon>menu</Icon>
-				</NavigationIcon>
-			{/if}
-			<Title>Svelte Typed Context</Title>
-		</Section>
-		<slot slot="content" class={contentClass} />
+<div class="TopAppBar">
+	<TopAppBar bind:this={topAppBar} variant="standard">
+		<Row>
+			<Section>
+				{#if showMenuBtn}
+					<IconButton
+						class="material-icons"
+						on:click={() => dispatch("navButtonClick")}>menu</IconButton
+					>
+				{/if}
+				<Title>Svelte Typed Context</Title>
+			</Section>
+		</Row>
 	</TopAppBar>
+	<AutoAdjust {topAppBar} component={Div}>
+		<slot />
+	</AutoAdjust>
 </div>
 
-<style lang="scss" global>
+<style lang="scss">
 	@use "@material/top-app-bar/mixins.scss" as top-app-bar;
 	@use "@material/elevation/index.scss" as elevation;
 
-	:local(div) {
-		.top-app-bar {
-			@include elevation.elevation(4);
-			@include top-app-bar.ink-color(white);
+	.TopAppBar {
+		:global {
+			.mdc-top-app-bar {
+				@include elevation.elevation(4);
+				@include top-app-bar.ink-color(white);
+			}
 		}
 	}
 </style>
