@@ -14,6 +14,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = resolve(__filename, "..");
 
 const scssIncludePaths = [
+	resolve(__dirname),
 	resolve(__dirname, "src"),
 	resolve(__dirname, "node_modules"),
 	resolve(__dirname, "src/styles"),
@@ -25,11 +26,16 @@ const base = isProduction() ? "/svelte-context-enhanced" : "";
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: preprocess({
-		scss: {
-			includePaths: scssIncludePaths,
-		},
-	}),
+	preprocess: [
+		preprocess({
+			scss: {
+				prependData: '@use "src/variables.scss" as *;',
+				includePaths: scssIncludePaths,
+			},
+
+			postcss: true,
+		}),
+	],
 	kit: {
 		adapter: adapter(),
 
@@ -48,21 +54,19 @@ const config = {
 
 		vite: {
 			plugins: [tsconfigPaths(), viteCommonjs()],
+
 			server: {
 				force: true,
 			},
+
 			optimizeDeps: {
 				exclude: ["svelte", "svelte/internal", "svelte/store"],
 			},
+
 			resolve: {
-				alias: [
-					{
-						find: /^@svelte-material-design\/(.+)/,
-						replacement: "@svelte-material-ui-test/core/packages/$1",
-					},
-				],
-				// alias: [{ find: /^#src\/(.+)\.js$/, replacement: "src/$1" }], breaks vite
+				alias: [{ find: /^#src\/(.+)$/, replacement: "/src/$1" }],
 			},
+
 			ssr: {
 				noExternal: [
 					"@raythurnevoid/svelte-context-enhanced",
@@ -72,6 +76,16 @@ const config = {
 					"svelte-prism",
 				],
 			},
+
+			css: {
+				preprocessorOptions: {
+					scss: {
+						additionalData: '@use "src/variables.scss" as *;',
+					},
+				},
+			},
+
+			inlineStyleThreshold: 1024,
 		},
 	},
 };

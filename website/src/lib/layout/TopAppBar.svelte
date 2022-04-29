@@ -34,7 +34,7 @@
 			</Section>
 		</Row>
 	</TopAppBar>
-	<AutoAdjust {topAppBar} component={Div}>
+	<AutoAdjust class="mdc-top-app-bar--fixed-adjust" {topAppBar} component={Div}>
 		<slot />
 	</AutoAdjust>
 </div>

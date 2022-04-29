@@ -5,7 +5,7 @@
 	import { TopAppBar, Drawer } from ".";
 	import { AppContent, Scrim } from "@smui/drawer";
 
-	let open: boolean = true;
+	let open: boolean = false;
 	let dismissible: boolean = false;
 
 	let tabletMedia: MediaQueryList;

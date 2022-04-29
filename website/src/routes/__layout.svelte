@@ -1,7 +1,11 @@
 <script lang="ts">
 	import { Layout } from "$lib/layout/index";
-	import "../app.css";
 	import { onMount } from "svelte";
+	import "@fontsource/roboto/300.css";
+	import "@fontsource/roboto/400.css";
+	import "@fontsource/material-icons";
+	import "#src/app.scss";
+	import "#src/styles/smui.css";
 
 	onMount(() => {
 		setTimeout(() => {
@@ -10,28 +14,17 @@
 	});
 </script>
 
-<svelte:head>
-	<link
-		rel="stylesheet"
-		href="https://fonts.googleapis.com/icon?family=Material+Icons"
-	/>
-	<link
-		rel="stylesheet"
-		href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700"
-	/>
-	<link
-		rel="stylesheet"
-		href="https://fonts.googleapis.com/css?family=Roboto+Mono"
-	/>
-</svelte:head>
-
 <Layout>
 	<slot />
 </Layout>
 
 <style lang="scss" global>
-	@use "smui-theme.scss";
-	@use "@material/theme/styles.scss";
+	// @use "app.scss";
+	// @use "smui.css";
+	// @use "@fontsource/material-icons/scss/mixins" as MaterialIcons;
+	// @use "@fontsource/roboto/scss/mixins" as Roboto;
+
+	// @include Roboto.fontFace();
 
 	html.smooth-scroll {
 		scroll-behavior: smooth;
