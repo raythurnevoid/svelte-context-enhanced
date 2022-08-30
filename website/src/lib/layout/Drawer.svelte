@@ -1,7 +1,7 @@
 <svelte:options immutable={true} />
 
 <script lang="ts">
-	import Drawer, { Content } from "@smui/drawer";
+	import Drawer, { Content, Scrim } from "@smui/drawer";
 	import List, { Item, Text } from "@smui/list";
 	import { page } from "$app/stores";
 	import { base } from "$app/paths";
@@ -22,24 +22,31 @@
 	});
 </script>
 
-<Drawer class="Drawer" variant={dismissible ? "modal" : undefined} bind:open>
-	<Content>
-		<List>
-			{#each links as link}
-				<Item href={link.href} activated={link.activated}>
-					<Text>
-						{link.label}
-					</Text>
-				</Item>
-			{/each}
-		</List>
-	</Content>
-</Drawer>
+<div class="Drawer">
+	<Drawer class="Drawer" variant={dismissible ? "modal" : undefined} bind:open>
+		<Content>
+			<List>
+				{#each links as link}
+					<Item href={link.href} activated={link.activated}>
+						<Text>
+							{link.label}
+						</Text>
+					</Item>
+				{/each}
+			</List>
+		</Content>
+	</Drawer>
+	{#if dismissible}<Scrim fixed={false} />{/if}
+</div>
 
 <style lang="scss">
-	:global {
-		.mdc-drawer {
-			position: fixed;
+	.Drawer {
+		display: contents;
+
+		:global {
+			.mdc-drawer {
+				position: fixed;
+			}
 		}
 	}
 </style>

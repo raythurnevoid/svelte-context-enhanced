@@ -1,13 +1,13 @@
-const autoprefixer = require("autoprefixer");
-const cssnano = require("cssnano");
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 
 const config = {
 	plugins: [
 		autoprefixer,
 		cssnano({
-			preset: "advanced",
-		}),
-	],
+			preset: 'advanced'
+		})
+	]
 };
 
 module.exports = config;

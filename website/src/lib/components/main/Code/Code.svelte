@@ -1,10 +1,11 @@
 <svelte:options immutable={true} />
 
 <script lang="ts">
+	import "#src/styles/prismjs/_theme.scss";
 	import Prism from "svelte-prism";
 	import "prismjs/components/prism-typescript.js";
 	import "prismjs/components/prism-bash.js";
-	import { CodeStyles, CopyButton } from ".";
+	import { CopyButton } from ".";
 
 	export let source: string;
 	export let lang: "svelte" | "ts" | "shell" = "svelte";
@@ -20,8 +21,6 @@
 		<CopyButton el={codeEl} />
 	</div>
 </div>
-
-<CodeStyles />
 
 <style lang="scss">
 	.shell-snippet-wrapper {

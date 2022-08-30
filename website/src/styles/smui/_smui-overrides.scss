@@ -1,0 +1,33 @@
+@use 'sass:color';
+@use "src/styles/breakpoints.scss";
+@use 'src/styles/smui/theme.scss';
+
+@mixin styles() {
+	--mdc-typography-headline1-font-size: 2.5rem;
+	--mdc-typography-headline1-line-height: 2.5rem;
+
+	--mdc-typography-headline2-font-size: 2rem;
+	--mdc-typography-headline2-line-height: 2rem;
+
+	@media screen and (min-width: breakpoints.$tablet) {
+		--mdc-typography-headline1-font-size: 6rem;
+		--mdc-typography-headline1-line-height: 6rem;
+
+		--mdc-typography-headline2-font-size: 2rem;
+		--mdc-typography-headline2-line-height: 2rem;
+	}
+
+	html,
+	body {
+		background-color: theme.$surface;
+		color: theme.$on-surface;
+	}
+
+	a.plain-link {
+		color: #40b3ff;
+
+		&:visited {
+			color: color.scale(#40b3ff, $lightness: -35%);
+		}
+	}
+}

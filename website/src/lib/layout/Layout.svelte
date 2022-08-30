@@ -9,10 +9,10 @@
 	let dismissible: boolean = false;
 
 	let loaded: boolean = false;
-	let tabletMedia: MediaQueryList;
+	let dismissibleDrawerMedia: MediaQueryList;
 	onMount(() => {
-		tabletMedia = window.matchMedia("(max-width: 960px)");
-		tabletMedia.addEventListener("change", handleTabletMediaChange);
+		dismissibleDrawerMedia = window.matchMedia("(min-width: 1280px)");
+		dismissibleDrawerMedia.addEventListener("change", handleTabletMediaChange);
 		handleTabletMediaChange();
 
 		window.requestIdleCallback(() => {
@@ -21,21 +21,23 @@
 	});
 
 	onDestroy(() => {
-		tabletMedia?.removeEventListener("change", handleTabletMediaChange);
+		dismissibleDrawerMedia?.removeEventListener(
+			"change",
+			handleTabletMediaChange
+		);
 	});
 
 	function handleTabletMediaChange() {
-		if (tabletMedia.matches) {
-			dismissible = true;
-		} else {
+		if (dismissibleDrawerMedia.matches) {
 			dismissible = false;
+		} else {
+			dismissible = true;
 		}
 	}
 </script>
 
 <div class="Layout" class:loaded>
 	<Drawer {dismissible} bind:open />
-	{#if dismissible}<Scrim />{/if}
 	<AppContent class="Layout__app-content">
 		<TopAppBar on:navButtonClick={() => (open = true)}>
 			<slot />
@@ -44,26 +46,24 @@
 </div>
 
 <style lang="scss">
-	.Layout {
-		&:not(.loaded) {
-			:global {
-				.Drawer {
-					@media screen and (max-width: 960px) {
-						display: none;
-					}
-				}
+	@use "src/styles/breakpoints.scss";
 
-				.Layout__app-content {
-					@media screen and (max-width: 960px) {
-						margin-left: 0 !important;
+	.Layout {
+		:global {
+			&:not(.loaded) {
+				.Drawer {
+					display: none;
+
+					@media screen and (min-width: breakpoints.$desktop-lg) {
+						display: block;
 					}
 				}
 			}
-		}
 
-		:global {
 			.Layout__app-content {
-				@media screen and (min-width: #{960px + 1}) {
+				margin-left: 0;
+
+				@media screen and (min-width: breakpoints.$desktop-lg) {
 					margin-left: 256px;
 				}
 			}

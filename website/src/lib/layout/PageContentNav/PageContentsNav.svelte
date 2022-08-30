@@ -122,9 +122,9 @@
 	}
 </script>
 
-<div class="page-contents-nav" aria-labelledby="page-contents-nav__heading">
+<div class="PageContentsNav" aria-labelledby="PageContentsNav__heading">
 	<nav>
-		<span class="mdc-typography--overline" id="page-contents-nav__heading">
+		<span class="mdc-typography--overline" id="PageContentsNav__heading">
 			Contents
 		</span>
 		<ul>
@@ -140,20 +140,32 @@
 </div>
 
 <style lang="scss">
-	:global(#page-contents-nav__heading) {
-		color: var(--mdc-theme-text-secondary-on-background);
-	}
+	@use "src/styles/breakpoints.scss";
 
-	nav {
-		color: var(--mdc-theme-text-primary-on-background);
-		position: sticky;
-		top: 20%;
-		margin-inline: 5em;
-	}
+	.PageContentsNav {
+		display: none;
 
-	ul {
-		list-style: none;
-		padding: 0;
-		margin-block: 0.5em;
+		@media screen and (min-width: breakpoints.$tablet) {
+			display: block;
+		}
+
+		:global {
+			#PageContentsNav__heading {
+				color: var(--mdc-theme-text-secondary-on-background);
+			}
+		}
+
+		nav {
+			color: var(--mdc-theme-text-primary-on-background);
+			position: sticky;
+			top: 20%;
+			margin-inline: 5em;
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+			margin-block: 0.5em;
+		}
 	}
 </style>

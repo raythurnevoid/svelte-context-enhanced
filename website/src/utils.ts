@@ -1,4 +1,5 @@
 import { base } from "$app/paths";
+import type { LoadEvent } from "@sveltejs/kit/types";
 
 export function requestIdleCallback(
 	cb: () => void | Promise<void>,
@@ -11,10 +12,7 @@ export function requestIdleCallback(
 	}
 }
 
-export async function getFileContent(
-	fetch: typeof window["fetch"],
-	src: string
-) {
+export async function getFileContent(fetch: LoadEvent["fetch"], src: string) {
 	let base64Path: string;
 	if (typeof window !== "undefined") {
 		base64Path = window.btoa(src);

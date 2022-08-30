@@ -1,24 +1,16 @@
 {
 	"extends": "./.svelte-kit/tsconfig.json",
 	"compilerOptions": {
-		"baseUrl": ".",
-		"esModuleInterop": true,
+		"allowJs": true,
+		"checkJs": true,
+		"esModuleInterop": false,
+		"allowSyntheticDefaultImports": true,
 		"forceConsistentCasingInFileNames": true,
-		"lib": [
-			"es2020",
-			"DOM"
-		],
-		"moduleResolution": "node",
-		"module": "es2020",
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"target": "es2020",
 		"paths": {
-			"/src/*": [
-				"src/*"
-			],
 			"#src/*": [
 				"src/*"
 			],
@@ -28,12 +20,6 @@
 			"$lib/*": [
 				"src/lib/*"
 			],
-			"@svelte-material-design/core/*": [
-				"node_modules/@svelte-material-ui-test/core/packages/*",
-			],
-			"@svelte-material-ui-test/core/*": [
-				"node_modules/@svelte-material-ui-test/core/packages/*",
-			]
 		}
 	},
 }

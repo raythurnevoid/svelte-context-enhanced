@@ -1,0 +1,10 @@
+@use '@material/theme/color-palette.scss';
+
+// Svelte Colors!
+@forward '@material/theme/index.scss' with (
+  $primary: #c70000,
+  $secondary: #676778,
+  $background: #fff,
+  $surface: #fff,
+  $error: #b71c1c,
+);

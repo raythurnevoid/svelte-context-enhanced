@@ -1,0 +1,1 @@
+import{g as o}from"./utils-a2f3d065.js";const n=async function(e){async function t(){return await o(e.fetch,"src/lib/components/examples/basic/BasicExampleContext.ts")}return{howToUseSource:await t()}},c=Object.freeze(Object.defineProperty({__proto__:null,load:n},Symbol.toStringTag,{value:"Module"}));export{c as _,n as l};

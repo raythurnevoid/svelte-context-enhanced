@@ -34,11 +34,8 @@
 			"esbenp.prettier-vscode",
 			"svelte.svelte-vscode",
 			"aaron-bond.better-comments",
-			"wmaurer.change-case",
-			"mikestead.dotenv",
 			"usernamehw.errorlens",
 			"christian-kohler.path-intellisense",
-			"searKing.preview-vscode",
 			"pflannery.vscode-versionlens",
 			"vscode-icons-team.vscode-icons",
 		]
