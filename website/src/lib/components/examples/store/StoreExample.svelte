@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { readable } from "svelte/store";
-
 	import StoreExampleChild from "./StoreExampleChild.svelte";
 	import { setCounterContext, setTimeContext } from "./StoreExampleContext";
 
