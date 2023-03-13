@@ -1,10 +1,9 @@
 {
-	"extends": "@raythurnevoid/svelte-template/tsconfig.json",
+	"extends": "./.svelte-kit/tsconfig.json",
 	"compilerOptions": {
-		"baseUrl": ".",
-		"outDir": "./lib",
-	},
-	"include": [
-		"src"
-	]
+		"moduleResolution": "NodeNext",
+		"verbatimModuleSyntax": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true
+	}
 }

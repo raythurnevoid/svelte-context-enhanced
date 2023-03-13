@@ -1,29 +1,19 @@
 <svelte:options immutable={true} />
 
 <script lang="ts">
-	import "#src/app.scss";
-	import "#src/styles/smui/smui.css";
-	import { Layout } from "$lib/layout/index";
-	import { onMount } from "svelte";
-	import { base } from "$app/paths";
+	import '../app.scss';
+	import TopAppBar from '$lib/components/layout/top-app-bar/TopAppBar.svelte';
+	import Snackbars from '$lib/components/snackbars/Snackbars.svelte';
+	import type { LayoutData } from './$types.js';
 
-	onMount(() => {
-		setTimeout(() => {
-			window.document.firstElementChild?.classList.add("smooth-scroll");
-		});
-	});
+	export let data: LayoutData;
 </script>
 
 <svelte:head>
-	<link rel="icon" href="{base}/favicon.png" />
+	<meta name="description" content={data.meta.description} />
+	<meta name="keywords" content={data.meta.keywords.join(', ')} />
 </svelte:head>
 
-<Layout>
-	<slot />
-</Layout>
-
-<style lang="scss" global>
-	html.smooth-scroll {
-		scroll-behavior: smooth;
-	}
-</style>
+<TopAppBar />
+<slot />
+<Snackbars />

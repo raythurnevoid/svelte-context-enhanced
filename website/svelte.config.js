@@ -1,34 +1,26 @@
-import preprocess from "svelte-preprocess";
-import adapter from "@sveltejs/adapter-static";
-import { env } from "node:process";
-
-const isProduction = env.NODE_ENV === "production";
-
-const base = isProduction ? "/svelte-context-enhanced" : "";
+import adapter from '@sveltejs/adapter-static';
+import { vitePreprocess } from '@sveltejs/kit/vite';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	preprocess: [
-		preprocess({
-			postcss: true,
-		}),
-	],
+	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
+	// for more information about preprocessors
+	preprocess: [vitePreprocess()],
 
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			precompress: true
+		}),
 
 		alias: {
-			"#src": "src",
-		},
-
-		prerender: {
-			default: true,
+			'~@fontsource': '../node_modules/@fontsource'
 		},
 
 		paths: {
-			base,
-		},
-	},
+			base: '/svelte-context-enhanced',
+			relative: false
+		}
+	}
 };
 
 export default config;

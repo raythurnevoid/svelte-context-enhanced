@@ -1,4 +1,0 @@
-import { readable } from "svelte/store";
-import type { Writable, Readable, StartStopNotifier } from "svelte/store";
-export declare function createContextWritableStore<T>(): readonly [(value?: T, start?: StartStopNotifier<T>) => Writable<T>, () => Writable<T>];
-export declare function createContextStore<T>(): readonly [typeof readable, () => Readable<T>];

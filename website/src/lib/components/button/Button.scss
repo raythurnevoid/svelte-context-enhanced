@@ -1,0 +1,6 @@
+@use '$lib/styles/material-theme.scss';
+@use '@material/button/button.scss';
+
+@layer material {
+	@include button.styles;
+}

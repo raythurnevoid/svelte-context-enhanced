@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/svelte-context-enhanced/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+
+		<meta http-equiv="content-security-policy" content="">
+		<link href="/svelte-context-enhanced/_app/immutable/assets/_layout.1da7f9e5.css" rel="stylesheet">
+		<link href="/svelte-context-enhanced/_app/immutable/assets/Snackbars.1c6a0e8f.css" rel="stylesheet">
+		<link href="/svelte-context-enhanced/_app/immutable/assets/Snackbar.21c8266a.css" rel="stylesheet">
+		<link href="/svelte-context-enhanced/_app/immutable/assets/Page.6ca92b2e.css" rel="stylesheet">
+		<link rel="modulepreload" href="/svelte-context-enhanced/_app/immutable/entry/start.e560c440.js">
+		<link rel="modulepreload" href="/svelte-context-enhanced/_app/immutable/chunks/index.c0f3b702.js">
+		<link rel="modulepreload" href="/svelte-context-enhanced/_app/immutable/chunks/singletons.ff72e3d2.js">
+		<link rel="modulepreload" href="/svelte-context-enhanced/_app/immutable/chunks/paths.c8145699.js">
+		<link rel="modulepreload" href="/svelte-context-enhanced/_app/immutable/entry/app.f001e8aa.js">
+		<link rel="modulepreload" href="/svelte-context-enhanced/_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="/svelte-context-enhanced/_app/immutable/entry/_layout.svelte.b96736a0.js">
+		<link rel="modulepreload" href="/svelte-context-enhanced/_app/immutable/chunks/Snackbars.fb52e24f.js">
+		<link rel="modulepreload" href="/svelte-context-enhanced/_app/immutable/entry/_layout.ts.984db11e.js">
+		<link rel="modulepreload" href="/svelte-context-enhanced/_app/immutable/chunks/_layout.da46b06b.js">
+		<link rel="modulepreload" href="/svelte-context-enhanced/_app/immutable/entry/typed-key-page.svelte.4d1f48fc.js">
+		<link rel="modulepreload" href="/svelte-context-enhanced/_app/immutable/chunks/Page.d16e62cd.js"><title>Svelte Context Enhanced | Typed Key</title><!-- HEAD_svelte-p8qzr9_START --><meta name="description" content="Enhances Svelte's Context API with TypeScript type checking for a more robust development experience."><meta name="keywords" content="svelte, svelte context, typescript, library, type checking, typing, type"><!-- HEAD_svelte-p8qzr9_END --><!-- HEAD_svelte-e5zbbr_START --><!-- HEAD_svelte-e5zbbr_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="TopAppBar svelte-yv5eed"><header class="mdc-top-app-bar mdc-top-app-bar--fixed svelte-yv5eed"><div class="mdc-top-app-bar__row"><section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"><a class="TopAppBar__title mdc-top-app-bar__title svelte-yv5eed" href="/svelte-context-enhanced/">Svelte Typed Context </a></section>
+			<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar"><div class="GitHubLink svelte-16xxvjx">
+
+
+
+
+
+<div class="IconButton svelte-14nt9rj"><div class="mdc-touch-target-wrapper"><a class="mdc-icon-button mdc-icon-button--touch  svelte-14nt9rj" href="https://github.com/raythurnevoid/svelte-group-components" target="_blank" aria-describedby="IconButton--0__tooltip" aria-labelledby="IconButton--0__tooltip"><div class="mdc-icon-button__ripple"></div>
+			<div class="mdc-icon-button__touch"></div>
+			
+			<!-- HTML_TAG_START --><svg width="100%" height="100%" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg">
+	<path
+		fill-rule="evenodd"
+		clip-rule="evenodd"
+		d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
+		fill="#fff"
+	/>
+</svg>
+<!-- HTML_TAG_END --></a></div>
+
+	
+</div>
+</div></section></div></header>
+</div>
+
+
+
+
+
+
+<main class="Page svelte-3vfoiu"><div class="Page__content-container svelte-3vfoiu"><div class="content svelte-3vfoiu"><h1>Typed Key</h1>
+	<p>With the typed <code>ContextKey</code> you can keep the default svelte&#39;s API while keeping type checking
+	</p>
+	<h2>Usage</h2>
+	<p>Use <code>ContextKey</code> with the <code>setContext</code> and <code>getContext</code>
+		methods provided by <code>svelte-context-enhanced</code>.
+	</p>
+	
+
+
+
+<div class="CodeSnippet svelte-jmyida"><code class="CodeSnippet__filename svelte-jmyida">TypedKeyExample.svelte</code>
+	
+
+
+
+<div class="Code svelte-1h6imry"><pre class="Code__content language-svelte svelte-1h6imry"><code><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ts<span class="token punctuation">"</span></span> <span class="token attr-name">context</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">import</span> type <span class="token punctuation">{</span> ContextKey <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@raythurnevoid/svelte-context-enhanced'</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token literal-property property">contextKey</span><span class="token operator">:</span> ContextKey<span class="token operator">&lt;</span>string<span class="token operator">></span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ts<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">import</span> AdvancedExampleChild <span class="token keyword">from</span> <span class="token string">'./TypedKeyExampleChild.svelte'</span><span class="token punctuation">;</span>
+	<span class="token keyword">import</span> <span class="token punctuation">{</span> setContext <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@raythurnevoid/svelte-context-enhanced'</span><span class="token punctuation">;</span>
+
+	<span class="token function">setContext</span><span class="token punctuation">(</span>contextKey<span class="token punctuation">,</span> <span class="token string">'value with typed key'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">// setContext(contextKey, 123); // This will fail type checking</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>AdvancedExampleChild</span> <span class="token punctuation">/></span></span>
+<!-- HTML_TAG_END --></code></pre>
+	<div class="Code__commands svelte-1h6imry">
+
+
+
+<div class="CopyButton svelte-1kb05rg">
+
+
+
+
+
+<div class="IconButton svelte-14nt9rj"><div class="mdc-touch-target-wrapper"><button class="mdc-icon-button mdc-icon-button--touch  svelte-14nt9rj" aria-describedby="IconButton--1__tooltip" aria-labelledby="IconButton--1__tooltip"><div class="mdc-icon-button__ripple"></div>
+			<div class="mdc-icon-button__touch"></div>
+			
+			<!-- HTML_TAG_START --><svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48">
+	<path
+		d="M180 975q-24 0-42-18t-18-42V312h60v603h474v60H180Zm120-120q-24 0-42-18t-18-42V235q0-24 18-42t42-18h440q24 0 42 18t18 42v560q0 24-18 42t-42 18H300Zm0-60h440V235H300v560Zm0 0V235v560Z"
+	/>
+</svg>
+<!-- HTML_TAG_END --></button></div>
+
+	
+</div>
+</div></div>
+</div>
+</div>
+	
+
+
+
+<div class="CodeSnippet svelte-jmyida"><code class="CodeSnippet__filename svelte-jmyida">TypedKeyExampleChild.svelte</code>
+	
+
+
+
+<div class="Code svelte-1h6imry"><pre class="Code__content language-svelte svelte-1h6imry"><code><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ts<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">import</span> <span class="token punctuation">{</span> getContext <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@raythurnevoid/svelte-context-enhanced'</span><span class="token punctuation">;</span>
+	<span class="token keyword">import</span> <span class="token punctuation">{</span> contextKey <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./TypedKeyExample.svelte'</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">const</span> value <span class="token operator">=</span> <span class="token function">getContext</span><span class="token punctuation">(</span>contextKey<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// inferred type is string</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token language-javascript"><span class="token punctuation">{</span>value<span class="token punctuation">}</span></span>
+<!-- HTML_TAG_END --></code></pre>
+	<div class="Code__commands svelte-1h6imry">
+
+
+
+<div class="CopyButton svelte-1kb05rg">
+
+
+
+
+
+<div class="IconButton svelte-14nt9rj"><div class="mdc-touch-target-wrapper"><button class="mdc-icon-button mdc-icon-button--touch  svelte-14nt9rj" aria-describedby="IconButton--2__tooltip" aria-labelledby="IconButton--2__tooltip"><div class="mdc-icon-button__ripple"></div>
+			<div class="mdc-icon-button__touch"></div>
+			
+			<!-- HTML_TAG_START --><svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48">
+	<path
+		d="M180 975q-24 0-42-18t-18-42V312h60v603h474v60H180Zm120-120q-24 0-42-18t-18-42V235q0-24 18-42t42-18h440q24 0 42 18t18 42v560q0 24-18 42t-42 18H300Zm0-60h440V235H300v560Zm0 0V235v560Z"
+	/>
+</svg>
+<!-- HTML_TAG_END --></button></div>
+
+	
+</div>
+</div></div>
+</div>
+</div>
+	<h2>Result</h2>
+	
+
+<div class="ExampleResultPanel svelte-jt9bsb">value with typed key
+</div>
+	<footer class="PageFooterLinks svelte-y2hd2b">
+
+
+
+<div class="Button mdc-touch-target-wrapper"><a class="mdc-button mdc-button--touch mdc-button--raised" href="/svelte-context-enhanced/"><span class="mdc-button__ripple"></span>
+		<span class="mdc-button__touch"></span>
+		<span class="mdc-button__label">MAIN PAGE</span></a></div>
+</footer></div></div>
+</main>
+
+
+
+
+
+
+<aside class="Snackbars"></aside>
+
+
+			
+			<script>
+				{
+					__sveltekit_1yizasx = {
+						env: {},
+						assets: "/svelte-context-enhanced",
+						base: "/svelte-context-enhanced",
+						element: document.currentScript.parentElement
+					};
+
+					const data = [{"type":"data","data":{meta:{description:"Enhances Svelte's Context API with TypeScript type checking for a more robust development experience.",keywords:["svelte","svelte context","typescript","library","type checking","typing","type"]}},"uses":{}},{"type":"data","data":{snippets:{"TypedKeyExample.svelte":"\u003Cspan class=\"token tag\"\u003E\u003Cspan class=\"token tag\"\u003E\u003Cspan class=\"token punctuation\"\u003E&lt;\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E \u003Cspan class=\"token attr-name\"\u003Elang\u003C\u002Fspan\u003E\u003Cspan class=\"token attr-value\"\u003E\u003Cspan class=\"token punctuation\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E\"\u003C\u002Fspan\u003Ets\u003Cspan class=\"token punctuation\"\u003E\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E \u003Cspan class=\"token attr-name\"\u003Econtext\u003C\u002Fspan\u003E\u003Cspan class=\"token attr-value\"\u003E\u003Cspan class=\"token punctuation\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E\"\u003C\u002Fspan\u003Emodule\u003Cspan class=\"token punctuation\"\u003E\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\"token script\"\u003E\u003Cspan class=\"token language-javascript\"\u003E\n\t\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E type \u003Cspan class=\"token punctuation\"\u003E{\u003C\u002Fspan\u003E ContextKey \u003Cspan class=\"token punctuation\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E'@raythurnevoid\u002Fsvelte-context-enhanced'\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\t\u003Cspan class=\"token keyword\"\u003Eexport\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E \u003Cspan class=\"token literal-property property\"\u003EcontextKey\u003C\u002Fspan\u003E\u003Cspan class=\"token operator\"\u003E:\u003C\u002Fspan\u003E ContextKey\u003Cspan class=\"token operator\"\u003E&lt;\u003C\u002Fspan\u003Estring\u003Cspan class=\"token operator\"\u003E\u003E\u003C\u002Fspan\u003E \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E{\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E}\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\"token tag\"\u003E\u003Cspan class=\"token tag\"\u003E\u003Cspan class=\"token punctuation\"\u003E&lt;\u002F\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token tag\"\u003E\u003Cspan class=\"token tag\"\u003E\u003Cspan class=\"token punctuation\"\u003E&lt;\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E \u003Cspan class=\"token attr-name\"\u003Elang\u003C\u002Fspan\u003E\u003Cspan class=\"token attr-value\"\u003E\u003Cspan class=\"token punctuation\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E\"\u003C\u002Fspan\u003Ets\u003Cspan class=\"token punctuation\"\u003E\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\"token script\"\u003E\u003Cspan class=\"token language-javascript\"\u003E\n\t\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E AdvancedExampleChild \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E'.\u002FTypedKeyExampleChild.svelte'\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\t\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E{\u003C\u002Fspan\u003E setContext \u003Cspan class=\"token punctuation\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E'@raythurnevoid\u002Fsvelte-context-enhanced'\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\t\u003Cspan class=\"token function\"\u003EsetContext\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003EcontextKey\u003Cspan class=\"token punctuation\"\u003E,\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E'value with typed key'\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\t\u003Cspan class=\"token comment\"\u003E\u002F\u002F setContext(contextKey, 123); \u002F\u002F This will fail type checking\u003C\u002Fspan\u003E\n\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\"token tag\"\u003E\u003Cspan class=\"token tag\"\u003E\u003Cspan class=\"token punctuation\"\u003E&lt;\u002F\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token tag\"\u003E\u003Cspan class=\"token tag\"\u003E\u003Cspan class=\"token punctuation\"\u003E&lt;\u003C\u002Fspan\u003EAdvancedExampleChild\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E\u002F\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\n","TypedKeyExampleChild.svelte":"\u003Cspan class=\"token tag\"\u003E\u003Cspan class=\"token tag\"\u003E\u003Cspan class=\"token punctuation\"\u003E&lt;\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E \u003Cspan class=\"token attr-name\"\u003Elang\u003C\u002Fspan\u003E\u003Cspan class=\"token attr-value\"\u003E\u003Cspan class=\"token punctuation\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E\"\u003C\u002Fspan\u003Ets\u003Cspan class=\"token punctuation\"\u003E\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\"token script\"\u003E\u003Cspan class=\"token language-javascript\"\u003E\n\t\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E{\u003C\u002Fspan\u003E getContext \u003Cspan class=\"token punctuation\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E'@raythurnevoid\u002Fsvelte-context-enhanced'\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\t\u003Cspan class=\"token keyword\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\"token punctuation\"\u003E{\u003C\u002Fspan\u003E contextKey \u003Cspan class=\"token punctuation\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\"token keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"token string\"\u003E'.\u002FTypedKeyExample.svelte'\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E\n\n\t\u003Cspan class=\"token keyword\"\u003Econst\u003C\u002Fspan\u003E value \u003Cspan class=\"token operator\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\"token function\"\u003EgetContext\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E(\u003C\u002Fspan\u003EcontextKey\u003Cspan class=\"token punctuation\"\u003E)\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E;\u003C\u002Fspan\u003E \u003Cspan class=\"token comment\"\u003E\u002F\u002F inferred type is string\u003C\u002Fspan\u003E\n\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\"token tag\"\u003E\u003Cspan class=\"token tag\"\u003E\u003Cspan class=\"token punctuation\"\u003E&lt;\u002F\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\"token punctuation\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\n\n\u003Cspan class=\"token language-javascript\"\u003E\u003Cspan class=\"token punctuation\"\u003E{\u003C\u002Fspan\u003Evalue\u003Cspan class=\"token punctuation\"\u003E}\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\n"}},"uses":{}}];
+
+					Promise.all([
+						import("/svelte-context-enhanced/_app/immutable/entry/start.e560c440.js"),
+						import("/svelte-context-enhanced/_app/immutable/entry/app.f001e8aa.js")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_1yizasx.element, {
+							node_ids: [0, 3],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

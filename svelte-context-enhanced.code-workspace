@@ -17,14 +17,12 @@
 			"activityBarBadge.background": "#0a0a1d",
 			"activityBarBadge.foreground": "#e7e7e7",
 		},
-		"prettier.useTabs": true,
-		"prettier.singleQuote": false,
 		"editor.tabSize": 2,
 		"editor.detectIndentation": false,
 		"editor.formatOnSave": true,
 		"editor.insertSpaces": false,
 		"files.eol": "\n",
-		"typescript.tsdk": "node_modules\\typescript\\lib",
+		"typescript.tsdk": "./node_modules/typescript/lib",
 		"typescript.preferences.importModuleSpecifier": "relative",
 		"typescript.preferences.importModuleSpecifierEnding": "js",
 		"typescript.enablePromptUseWorkspaceTsdk": true
@@ -35,9 +33,9 @@
 			"svelte.svelte-vscode",
 			"aaron-bond.better-comments",
 			"usernamehw.errorlens",
-			"christian-kohler.path-intellisense",
 			"pflannery.vscode-versionlens",
 			"vscode-icons-team.vscode-icons",
+			"mrmlnc.vscode-scss"
 		]
 	}
 }
