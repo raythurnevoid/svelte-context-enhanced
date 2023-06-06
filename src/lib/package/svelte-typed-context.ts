@@ -12,7 +12,7 @@ import {
  */
 export interface ContextKey<T = unknown> {}
 
-type getContext = <T>(key: ContextKey<T>) => undefined | T;
+type getContext = <T>(key: ContextKey<T>) => T;
 type setContext = <T>(key: ContextKey<T>, context: T) => void;
 
 export const getContext = svelteGetContext as getContext;

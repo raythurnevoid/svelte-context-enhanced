@@ -28,11 +28,9 @@
 		"recommendations": [
 			"esbenp.prettier-vscode",
 			"svelte.svelte-vscode",
-			"aaron-bond.better-comments",
 			"usernamehw.errorlens",
 			"pflannery.vscode-versionlens",
 			"vscode-icons-team.vscode-icons",
-			"mrmlnc.vscode-scss"
 		]
 	}
 }

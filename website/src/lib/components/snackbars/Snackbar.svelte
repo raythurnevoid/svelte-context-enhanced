@@ -45,5 +45,9 @@
 	.Snackbar {
 		bottom: calc(var(--Snackbar-position) * 64px);
 		transition: bottom 0.1s ease-in-out;
+
+		:global(.mdc-icon-button) {
+			color: white;
+		}
 	}
 </style>

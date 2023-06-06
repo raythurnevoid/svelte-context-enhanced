@@ -2,8 +2,8 @@
 @use '@fontsource/roboto/scss/mixins.scss' as roboto;
 
 $font-display: swap;
-@include roboto.fontFaceCustom($display: __FONT_DISPLAY__);
-@include roboto.fontFaceCustom($display: __FONT_DISPLAY__, $weight: 300);
+@include roboto.faces($display: __FONT_DISPLAY__);
+@include roboto.faces($display: __FONT_DISPLAY__, $weights: (300));
 
 body {
 	@extend .mdc-typography--body1;
